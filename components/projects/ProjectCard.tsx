@@ -14,20 +14,29 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Card 
       hover 
       padding="lg"
-      className="h-full flex flex-col group cursor-pointer"
+      className={`h-full flex flex-col group cursor-pointer ${
+        project.metadata?.featured ? 'border-accent-600 border-2' : ''
+      }`}
     >
       {/* Header: Type and Status */}
       <div className="flex items-start justify-between mb-4">
-        <Eyebrow className="text-accent-600">
-          {project.type}
-        </Eyebrow>
+        <div className="flex items-center gap-2">
+          <Eyebrow className="text-accent-700">
+            {project.type}
+          </Eyebrow>
+          {project.metadata?.featured && (
+            <Badge variant="accent" className="text-xs">
+              Featured
+            </Badge>
+          )}
+        </div>
         <Badge variant="outline" className="text-xs">
           {project.status}
         </Badge>
       </div>
 
       {/* Project Name */}
-      <Heading as="h3" className="mb-3 group-hover:text-accent-600 transition-colors">
+      <Heading as="h3" className="mb-3 group-hover:text-accent-600 transition-colors text-xl">
         {project.name}
       </Heading>
 
@@ -38,7 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* PM Competencies */}
       <div className="mb-6">
-        <Caption className="uppercase tracking-wide text-neutral-500 mb-2 block">
+        <Caption className="uppercase tracking-wide text-neutral-500 mb-2 block text-xs">
           What I Demonstrated
         </Caption>
         <div className="flex flex-wrap gap-2">
@@ -62,7 +71,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Key Insight */}
       <div className="mb-6 flex-1">
-        <Caption className="uppercase tracking-wide text-neutral-500 mb-2 block">
+        <Caption className="uppercase tracking-wide text-neutral-500 mb-2 block text-xs">
           The Interesting Part
         </Caption>
         <Body size="sm" className="text-neutral-700 italic leading-relaxed">
@@ -75,7 +84,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <Link 
           href={`/work/${project.slug}`}
           variant="accent"
-          className="inline-flex items-center gap-1 text-sm font-medium no-underline group-hover:gap-2 transition-all"
+          className="inline-flex items-center gap-1 text-sm font-semibold no-underline text-accent-600 hover:text-accent-700 group-hover:gap-2 transition-all"
         >
           {project.cta}
         </Link>

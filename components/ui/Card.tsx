@@ -9,7 +9,7 @@ interface CardProps {
 
 /**
  * Card component for content grouping
- * Used sparingly - editorial layout over floating cards everywhere
+ * Clean, minimal design with subtle elevation
  */
 export function Card({ 
   children, 
@@ -25,7 +25,7 @@ export function Card({
   };
 
   const hoverStyles = hover 
-    ? 'hover:border-neutral-300 hover:shadow-sm transition-all duration-[250ms]' 
+    ? 'hover:border-neutral-300 hover:shadow-md transition-all' 
     : '';
 
   return (
@@ -34,6 +34,7 @@ export function Card({
         border border-neutral-200
         rounded-lg
         bg-white
+        shadow-sm
         ${paddingClasses[padding]}
         ${hoverStyles}
         ${className}

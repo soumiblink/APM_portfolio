@@ -44,6 +44,9 @@ export interface ProjectData {
   // Case Study Preview
   keyInsight: string; // "What I decided" or "The interesting part"
   
+  // Technical Context (optional)
+  technicalContext?: string; // How technical background helped
+  
   // Visual Data (for card differentiation)
   visual?: {
     type: 'metric' | 'strategy' | 'insight' | 'experiment';
@@ -58,6 +61,7 @@ export interface ProjectData {
     timeline?: string;
     team?: string;
     industry?: string;
+    featured?: boolean;
   };
 }
 
@@ -75,6 +79,7 @@ export const projects: ProjectData[] = [
       'Prioritization',
     ],
     keyInsight: "Decided to focus on relevance over volume — helping users see fewer, better-fit roles instead of thousands of irrelevant listings.",
+    technicalContext: 'Evaluated recommendation system feasibility and MVP complexity',
     visual: {
       type: 'strategy',
       data: {
@@ -86,6 +91,7 @@ export const projects: ProjectData[] = [
     metadata: {
       timeline: '3 weeks',
       industry: 'Consumer Tech',
+      featured: true, // Mark as featured project
     }
   },
   {
@@ -101,6 +107,7 @@ export const projects: ProjectData[] = [
       'Product Strategy',
     ],
     keyInsight: "Explored what Notion's AI could become if it prioritized connecting knowledge over generating text.",
+    technicalContext: 'Applied AI/ML understanding to differentiate RAG from completion models',
     visual: {
       type: 'strategy',
       data: {
@@ -128,6 +135,7 @@ export const projects: ProjectData[] = [
       'AI Product Thinking',
     ],
     keyInsight: "Built an NLP-powered tool that groups feedback by theme instead of forcing PMs to read everything manually.",
+    technicalContext: 'Prototyped NLP pipeline to validate product value before full build',
     visual: {
       type: 'insight',
       data: {
@@ -155,6 +163,7 @@ export const projects: ProjectData[] = [
       'Technical Execution',
     ],
     keyInsight: "Designed an experimentation framework that connects test results to product decisions, not just statistical significance.",
+    technicalContext: 'Scoped MVP to ship in weeks by understanding what is technically simple vs. complex',
     visual: {
       type: 'experiment',
       data: {

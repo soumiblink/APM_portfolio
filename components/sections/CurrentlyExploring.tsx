@@ -1,46 +1,31 @@
 import { Container } from '../layout/Container';
-import { Heading, Body, Eyebrow } from '../ui/Typography';
-import { Badge } from '../ui/Badge';
 import { Section } from '../ui/Section';
-import { AnimatedSection } from '../ui/AnimatedSection';
-
-const topics = [
-  'AI product management',
-  'Product-led growth',
-  'Early-stage product discovery',
-  'Technical product decisions',
-  'B2B SaaS products',
-];
 
 export function CurrentlyExploring() {
   return (
-    <Section spacing="md" className="bg-accent-50 border-y border-accent-200">
-      <Container>
-        <AnimatedSection animation="fade">
-          <div className="max-w-3xl mx-auto text-center">
-            <Eyebrow className="mb-3 text-accent-700">Currently Exploring</Eyebrow>
-            <Heading as="h3" className="mb-4">
-              What I'm learning about right now
-            </Heading>
-            <Body muted className="mb-6">
-              Product management is always evolving. Here's what I'm digging into lately.
-            </Body>
-            
-            <div className="flex flex-wrap gap-3 justify-center">
-              {topics.map((topic, index) => (
-                <AnimatedSection 
-                  key={topic} 
-                  animation="fade" 
-                  delay={0.05 * index}
-                >
-                  <Badge variant="accent" className="text-sm py-2 px-4">
-                    {topic}
-                  </Badge>
-                </AnimatedSection>
-              ))}
-            </div>
+    <Section spacing="md">
+      <Container size="text">
+        {/* Lightweight editorial list */}
+        <div className="max-w-[680px]">
+          <div className="text-xs uppercase tracking-wider text-charcoal-500 mb-4 font-medium">
+            Currently thinking about
           </div>
-        </AnimatedSection>
+          
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-base text-charcoal-700">
+            {[
+              'AI-native workflows',
+              'Product experimentation',
+              'Technical product discovery',
+              'Early-stage problem finding',
+              'Human-AI interaction',
+            ].map((topic, index) => (
+              <span key={topic} className="flex items-center gap-2">
+                {index > 0 && <span className="text-charcoal-300">·</span>}
+                {topic}
+              </span>
+            ))}
+          </div>
+        </div>
       </Container>
     </Section>
   );

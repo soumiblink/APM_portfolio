@@ -43,7 +43,7 @@ export function AnimatedSection({
   }, [animation]);
 
   // Always use motion.div for consistent hydration
-  const variants: Variants = {
+  const variants: Record<string, Variants> = {
     fade: {
       hidden: { opacity: 0, y: 20 },
       visible: { 

@@ -2,6 +2,7 @@
 
 import { Container } from './Container';
 import { Link } from '../ui/Link';
+import { Button } from '../ui/Button';
 import { useState, useEffect } from 'react';
 
 /**
@@ -49,29 +50,29 @@ export function Header() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-6">
             <Link 
               href="/#work" 
               variant="subtle"
-              className="text-sm font-medium"
+              className="text-sm font-medium hidden sm:inline"
             >
               Work
             </Link>
             <Link 
               href="/#about" 
               variant="subtle"
-              className="text-sm font-medium"
+              className="text-sm font-medium hidden sm:inline"
             >
               About
             </Link>
-            <Link 
-              href="/resume.pdf" 
-              variant="subtle"
-              className="text-sm font-medium"
-              external
+            <Button
+              href="/resume.pdf"
+              variant="secondary"
+              size="sm"
+              className="font-medium"
             >
               Resume
-            </Link>
+            </Button>
           </div>
         </nav>
       </Container>

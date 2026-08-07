@@ -2,13 +2,13 @@ import { ReactNode } from 'react';
 
 interface ContainerProps {
   children: ReactNode;
-  size?: 'default' | 'sm' | 'full';
+  size?: 'default' | 'text' | 'narrow' | 'full';
   className?: string;
 }
 
 /**
- * Container component for consistent page width and padding
- * Establishes the content boundaries for all sections
+ * Container component - Editorial Product Studio design
+ * Strong central grid with consistent content widths
  */
 export function Container({ 
   children, 
@@ -16,8 +16,9 @@ export function Container({
   className = '' 
 }: ContainerProps) {
   const sizeClasses = {
-    default: 'max-w-[1280px]',
-    sm: 'max-w-[768px]',
+    default: 'max-w-[1200px]',
+    text: 'max-w-[720px]',
+    narrow: 'max-w-[600px]',
     full: 'w-full'
   };
 
@@ -27,8 +28,7 @@ export function Container({
         ${sizeClasses[size]} 
         mx-auto 
         px-6 
-        md:px-8 
-        lg:px-12
+        md:px-8
         ${className}
       `}
     >

@@ -28,7 +28,7 @@ export function CaseStudyLayout({
           <div className="max-w-4xl">
             <Button 
               href="/#work" 
-              variant="ghost" 
+              variant="secondary" 
               size="sm"
               className="mb-6"
             >
@@ -96,11 +96,11 @@ export function CaseStudyLayout({
             </div>
 
             {/* Product Thesis */}
-            <div className="mt-8 p-6 bg-neutral-50 border-l-4 border-accent-500">
+            <div className="mt-8 p-6 bg-neutral-50 border-l-4 border-accent-600 rounded-r-md">
               <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
                 Product Thesis
               </Caption>
-              <Body className="font-medium italic">
+              <Body className="font-medium italic text-neutral-900">
                 {overview.productThesis}
               </Body>
             </div>

@@ -13,11 +13,11 @@ export function SelectedWork() {
           <div className="max-w-3xl mb-12">
             <Eyebrow className="mb-3">Selected Work</Eyebrow>
             <Heading as="h2" className="mb-4">
-              Product thinking in action
+              Product case studies
             </Heading>
             <Body size="lg" muted>
-              Four projects that demonstrate different PM competencies — 
-              from discovery to strategy to execution.
+              Four projects demonstrating discovery, strategy, prioritization, and execution. 
+              Each shows different PM competencies applied to real problems.
             </Body>
           </div>
         </AnimatedSection>
@@ -32,6 +32,14 @@ export function SelectedWork() {
               <ProjectCard project={project} />
             </AnimatedSection>
           ))}
+        </div>
+        
+        {/* SEO-friendly summary for crawlers */}
+        <div className="sr-only">
+          <p>
+            Product management portfolio showcasing user research, product strategy, 
+            prioritization frameworks, MVP development, experimentation, and AI product thinking.
+          </p>
         </div>
       </Container>
     </Section>

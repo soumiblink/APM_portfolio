@@ -8,7 +8,7 @@ interface BadgeProps {
 
 /**
  * Badge component for tags, labels, and metadata
- * Used for project tags, competencies, and status indicators
+ * Redesigned with proper contrast and cohesive color system
  */
 export function Badge({ 
   children, 
@@ -21,11 +21,11 @@ export function Badge({
       border border-neutral-200
     `,
     accent: `
-      bg-accent-100 text-accent-800
+      bg-accent-50 text-accent-800
       border border-accent-200
     `,
     outline: `
-      bg-transparent text-neutral-600
+      bg-white text-neutral-600
       border border-neutral-300
     `,
   };
@@ -37,7 +37,7 @@ export function Badge({
         px-2.5 py-1
         text-xs font-medium
         rounded-md
-        transition-colors duration-[150ms]
+        transition-colors
         ${variants[variant]}
         ${className}
       `}

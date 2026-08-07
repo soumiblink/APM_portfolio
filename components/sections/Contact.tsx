@@ -1,68 +1,44 @@
 import { Container } from '../layout/Container';
-import { Heading, Body } from '../ui/Typography';
-import { Link } from '../ui/Link';
+import { Button } from '../ui/Button';
 import { Section } from '../ui/Section';
-import { AnimatedSection } from '../ui/AnimatedSection';
 
 export function Contact() {
   return (
-    <Section spacing="xl" className="bg-neutral-50">
-      <Container size="sm">
-        <AnimatedSection animation="fade">
-          <div className="text-center max-w-2xl mx-auto">
-            <Heading as="h2" className="mb-4">
-              Have a product problem worth thinking about?
-            </Heading>
-            
-            <Body size="lg" muted className="mb-8">
-              I'd love to hear about it. Whether it's an APM opportunity, a product 
-              challenge, or just a conversation about building things people need.
-            </Body>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-lg">
-              <Link 
-                href="mailto:your.email@example.com"
-                variant="accent"
-                className="font-medium"
-              >
-                your.email@example.com
-              </Link>
-              
-              <span className="text-neutral-300 hidden sm:inline">•</span>
-              
-              <Link 
-                href="https://linkedin.com/in/yourprofile"
-                variant="accent"
-                className="font-medium"
-                external
-              >
-                LinkedIn
-              </Link>
-              
-              <span className="text-neutral-300 hidden sm:inline">•</span>
-              
-              <Link 
-                href="https://github.com/yourusername"
-                variant="accent"
-                className="font-medium"
-                external
-              >
-                GitHub
-              </Link>
-              
-              <span className="text-neutral-300 hidden sm:inline">•</span>
-              
-              <Link 
-                href="/resume.pdf"
-                variant="accent"
-                className="font-medium"
-                external
-              >
-                Resume
-              </Link>
-            </div>
+    <Section spacing="xl" className="border-t-2 border-charcoal-900">
+      <Container size="text">
+        {/* Strong typographic CTA */}
+        <div className="max-w-[680px]">
+          <div className="section-label mb-6">
+            Open to APM opportunities
           </div>
-        </AnimatedSection>
+          
+          <h2 className="text-4xl md:text-5xl font-semibold text-charcoal-900 leading-tight mb-8">
+            Have a product problem worth thinking about?
+          </h2>
+          
+          <p className="text-lg text-charcoal-700 leading-relaxed mb-10">
+            I'm looking for APM opportunities where I can learn from experienced PMs 
+            and ship products that solve real problems.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              href="mailto:your.email@example.com"
+              variant="primary"
+              size="lg"
+            >
+              Email me
+            </Button>
+            
+            <Button
+              href="https://linkedin.com/in/yourprofile"
+              variant="secondary"
+              size="lg"
+            >
+              Connect on LinkedIn
+            </Button>
+          </div>
+        </div>
       </Container>
     </Section>
   );

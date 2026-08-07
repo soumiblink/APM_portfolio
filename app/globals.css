@@ -2,92 +2,143 @@
 
 /* ============================================
    APM Portfolio Design System
-   Visual identity: Editorial, restrained, product-minded
+   Visual Identity: Editorial Product Studio
+   
+   Design Principles:
+   - Light-first editorial design
+   - Warm, paper-like backgrounds
+   - Sophisticated typography
+   - Restrained accent usage
+   - Strong hierarchy through spacing and type
+   - WCAG AA+ contrast everywhere
    ============================================ */
 
 :root {
-  /* Neutral palette - warm, sophisticated */
-  --neutral-50: #fafaf9;
-  --neutral-100: #f5f5f4;
-  --neutral-200: #e7e5e4;
-  --neutral-300: #d6d3d1;
-  --neutral-400: #a8a29e;
-  --neutral-500: #78716c;
-  --neutral-600: #57534e;
-  --neutral-700: #44403c;
-  --neutral-800: #292524;
-  --neutral-900: #1c1917;
-  --neutral-950: #0c0a09;
+  /* ===== BASE COLORS ===== */
+  /* Warm paper-like backgrounds */
+  --warmth-50: #fdfcfb;
+  --warmth-100: #faf8f6;
+  --warmth-200: #f4f1ed;
   
-  /* Accent - warm amber for personality (used sparingly) */
-  --accent-50: #fffbeb;
-  --accent-100: #fef3c7;
-  --accent-200: #fde68a;
-  --accent-300: #fcd34d;
-  --accent-400: #fbbf24;
-  --accent-500: #f59e0b;
-  --accent-600: #d97706;
-  --accent-700: #b45309;
-  --accent-800: #92400e;
-  --accent-900: #78350f;
+  /* Near-black charcoal for text */
+  --charcoal-900: #1a1816;
+  --charcoal-800: #2d2a27;
+  --charcoal-700: #3f3a35;
+  --charcoal-600: #524d47;
+  --charcoal-500: #6b6560;
+  --charcoal-400: #8a8378;
   
-  /* Semantic colors */
-  --background: var(--neutral-50);
-  --foreground: var(--neutral-900);
-  --border: var(--neutral-200);
-  --border-hover: var(--neutral-300);
-  --muted: var(--neutral-400);
+  /* Sophisticated burnt sienna accent - editorial, warm, restrained */
+  --accent-50: #faf6f4;
+  --accent-100: #f5ebe6;
+  --accent-200: #e8d3c7;
+  --accent-300: #d4aa91;
+  --accent-400: #c18860;
+  --accent-500: #b57247;
+  --accent-600: #a05d3a;
+  --accent-700: #864d32;
+  --accent-800: #6d3f2b;
+  --accent-900: #5a3524;
   
-  /* Spacing scale (8px grid) */
+  /* ===== DESIGN TOKENS ===== */
+  /* Backgrounds */
+  --background: var(--warmth-50);
+  --background-secondary: var(--warmth-100);
+  --background-elevated: #ffffff;
+  --background-subtle: var(--warmth-200);
+  
+  /* Text */
+  --text-primary: var(--charcoal-900);
+  --text-secondary: var(--charcoal-700);
+  --text-muted: var(--charcoal-500);
+  --text-subtle: var(--charcoal-400);
+  
+  /* Borders */
+  --border: #e8e4df;
+  --border-strong: #d4cec5;
+  --border-subtle: #f0ede8;
+  
+  /* Accent */
+  --accent: var(--accent-600);
+  --accent-hover: var(--accent-700);
+  --accent-soft: var(--accent-50);
+  --accent-muted: var(--accent-100);
+  
+  /* Interactive */
+  --button-primary-bg: var(--charcoal-900);
+  --button-primary-text: #ffffff;
+  --button-primary-hover: var(--charcoal-800);
+  
+  --button-secondary-bg: var(--background-elevated);
+  --button-secondary-text: var(--charcoal-900);
+  --button-secondary-border: var(--border-strong);
+  --button-secondary-hover: var(--warmth-100);
+  
+  --link-color: var(--accent-600);
+  --link-hover: var(--accent-700);
+  
+  /* Spacing scale - 4px base */
   --spacing-xs: 0.5rem;    /* 8px */
-  --spacing-sm: 1rem;      /* 16px */
-  --spacing-md: 1.5rem;    /* 24px */
-  --spacing-lg: 2rem;      /* 32px */
-  --spacing-xl: 3rem;      /* 48px */
-  --spacing-2xl: 4rem;     /* 64px */
-  --spacing-3xl: 6rem;     /* 96px */
+  --spacing-sm: 0.75rem;   /* 12px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
   
-  /* Typography scale */
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
-  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Roboto", "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", monospace;
+  
+  /* Line heights */
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  --leading-loose: 1.75;
+  
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
   
   /* Container widths */
-  --container-max: 1280px;
-  --container-sm: 768px;
-  --container-padding: 1.5rem;
+  --container-max: 1200px;
+  --container-text: 720px;
+  --container-narrow: 600px;
   
-  /* Border radius */
+  /* Border radius - restrained */
   --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
   
   /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 350ms ease;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @theme inline {
-  /* Color tokens */
-  --color-neutral-*: initial;
+  /* Map design tokens to Tailwind utilities */
+  --color-warmth-*: initial;
+  --color-charcoal-*: initial;
   --color-accent-*: initial;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-border: var(--border);
-  --color-muted: var(--muted);
   
-  /* Neutral scale */
-  --color-neutral-50: var(--neutral-50);
-  --color-neutral-100: var(--neutral-100);
-  --color-neutral-200: var(--neutral-200);
-  --color-neutral-300: var(--neutral-300);
-  --color-neutral-400: var(--neutral-400);
-  --color-neutral-500: var(--neutral-500);
-  --color-neutral-600: var(--neutral-600);
-  --color-neutral-700: var(--neutral-700);
-  --color-neutral-800: var(--neutral-800);
-  --color-neutral-900: var(--neutral-900);
-  --color-neutral-950: var(--neutral-950);
+  /* Warmth scale (backgrounds) */
+  --color-warmth-50: var(--warmth-50);
+  --color-warmth-100: var(--warmth-100);
+  --color-warmth-200: var(--warmth-200);
+  
+  /* Charcoal scale (text) */
+  --color-charcoal-900: var(--charcoal-900);
+  --color-charcoal-800: var(--charcoal-800);
+  --color-charcoal-700: var(--charcoal-700);
+  --color-charcoal-600: var(--charcoal-600);
+  --color-charcoal-500: var(--charcoal-500);
+  --color-charcoal-400: var(--charcoal-400);
   
   /* Accent scale */
   --color-accent-50: var(--accent-50);
@@ -101,20 +152,29 @@
   --color-accent-800: var(--accent-800);
   --color-accent-900: var(--accent-900);
   
+  /* Design tokens as utilities */
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-elevated: var(--background-elevated);
+  --color-background-subtle: var(--background-subtle);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-subtle: var(--border-subtle);
+  
   /* Font families */
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   
-  /* Spacing extensions */
-  --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
-  --spacing-26: 6.5rem;
-  --spacing-30: 7.5rem;
-  
   /* Max widths */
   --max-width-container: var(--container-max);
-  --max-width-container-sm: var(--container-sm);
-  --max-width-prose: 65ch;
+  --max-width-text: var(--container-text);
+  --max-width-narrow: var(--container-narrow);
 }
 
 /* ============================================
@@ -129,16 +189,16 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 1rem;
-  line-height: 1.6;
-  transition: background-color var(--transition-base);
+  line-height: var(--leading-normal);
 }
 
 /* ============================================
@@ -148,32 +208,65 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: var(--leading-tight);
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: var(--leading-snug);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+  }
 }
 
 p {
   margin: 0;
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
 }
 
 a {
-  color: inherit;
+  color: var(--link-color);
   text-decoration: none;
   transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--link-hover);
 }
 
 /* ============================================
    Accessibility
    ============================================ */
 
-/* Focus visible styles */
 :focus-visible {
-  outline: 2px solid var(--accent-500);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
-/* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -184,12 +277,11 @@ a {
   }
 }
 
-/* Skip to content link */
 .skip-link {
   position: absolute;
   top: -100%;
   left: 0;
-  background: var(--foreground);
+  background: var(--text-primary);
   color: var(--background);
   padding: 0.75rem 1rem;
   text-decoration: none;
@@ -205,6 +297,53 @@ a {
    ============================================ */
 
 ::selection {
-  background-color: var(--accent-200);
-  color: var(--neutral-900);
+  background-color: var(--accent-muted);
+  color: var(--text-primary);
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Editorial details */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.accent-mark {
+  display: inline-block;
+  width: 0.25rem;
+  height: 1.5rem;
+  background: var(--accent);
+  margin-right: 0.75rem;
+}
+
+/* Container utilities */
+.container-text {
+  max-width: var(--container-text);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
 }
