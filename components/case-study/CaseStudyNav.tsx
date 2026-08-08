@@ -54,7 +54,7 @@ export function CaseStudyNav() {
               ${
                 activeSection === id
                   ? 'border-accent-600 text-accent-600 font-medium bg-accent-50'
-                  : 'border-neutral-200 text-neutral-600 hover:text-neutral-900 hover:border-neutral-400'
+                  : 'border-border text-charcoal-600 hover:text-charcoal-900 hover:border-neutral-400'
               }
             `}
           >

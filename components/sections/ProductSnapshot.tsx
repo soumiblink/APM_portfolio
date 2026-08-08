@@ -28,7 +28,7 @@ const themes = [
 
 export function ProductSnapshot() {
   return (
-    <Section spacing="lg" className="bg-neutral-50">
+    <Section spacing="lg" className="bg-warmth-200">
       <Container>
         <AnimatedSection animation="fade">
           <div className="max-w-3xl mx-auto text-center mb-12">
@@ -49,7 +49,7 @@ export function ProductSnapshot() {
               >
                 <div className="group">
                   <div className="mb-3 flex items-start">
-                    <div className="w-1 h-8 bg-accent-500 mr-3 group-hover:h-12 transition-all duration-300"></div>
+                    <div className="w-1 h-8 bg-accent-600 mr-3 group-hover:h-12 transition-all duration-300"></div>
                     <Heading as="h3" className="text-xl">
                       {theme.title}
                     </Heading>

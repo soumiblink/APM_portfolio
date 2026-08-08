@@ -4,7 +4,7 @@ import { Section } from '../ui/Section';
 
 export function Contact() {
   return (
-    <Section spacing="xl" className="border-t-2 border-charcoal-900">
+    <Section spacing="xl">
       <Container size="text">
         {/* Strong typographic CTA */}
         <div className="max-w-[680px]">

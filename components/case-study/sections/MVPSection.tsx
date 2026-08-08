@@ -19,7 +19,7 @@ export function MVPSection({ mvp }: MVPSectionProps) {
 
       <div className="space-y-6">
         {/* MVP Features */}
-        <Card padding="lg" className="border-accent-500 bg-accent-50">
+        <Card padding="lg" className="border-accent-600 bg-accent-50">
           <Caption className="uppercase tracking-wide text-accent-700 mb-3">
             MVP — Ship First
           </Caption>
@@ -35,7 +35,7 @@ export function MVPSection({ mvp }: MVPSectionProps) {
 
         {/* Future Iterations */}
         <Card padding="lg">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-3">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-3">
             Future Iterations
           </Caption>
           <ul className="space-y-2">
@@ -49,8 +49,8 @@ export function MVPSection({ mvp }: MVPSectionProps) {
         </Card>
 
         {/* Explicitly Rejected */}
-        <Card padding="lg" className="bg-neutral-50">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-3">
+        <Card padding="lg" className="bg-warmth-200">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-3">
             Explicitly Rejected
           </Caption>
           <ul className="space-y-2">

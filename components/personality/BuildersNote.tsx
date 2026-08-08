@@ -10,11 +10,11 @@ interface BuildersNoteProps {
  */
 export function BuildersNote({ note }: BuildersNoteProps) {
   return (
-    <div className="my-8 bg-neutral-900 text-neutral-100 rounded-lg p-6">
-      <Caption className="uppercase tracking-wide text-neutral-400 mb-2 block">
+    <div className="my-8 bg-charcoal-900 text-warmth-100 rounded-lg p-6">
+      <Caption className="uppercase tracking-wide text-charcoal-400 mb-2 block">
         Builder's Note
       </Caption>
-      <Body size="sm" className="text-neutral-200">
+      <Body size="sm" className="text-warmth-100">
         {note}
       </Body>
     </div>

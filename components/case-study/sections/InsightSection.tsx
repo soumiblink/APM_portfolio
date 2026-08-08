@@ -17,7 +17,7 @@ export function InsightSection({ insight }: InsightSectionProps) {
         id="insight"
       />
 
-      <div className="bg-accent-100 border-2 border-accent-500 rounded-lg p-8">
+      <div className="bg-accent-100 border-2 border-accent-600 rounded-lg p-8">
         <Heading as="h3" className="mb-4 text-accent-900">
           {insight.insight}
         </Heading>

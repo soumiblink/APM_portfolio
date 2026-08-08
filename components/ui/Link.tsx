@@ -23,10 +23,10 @@ export function Link({
 }: LinkProps) {
   const variants = {
     default: `
-      text-neutral-900
-      hover:text-accent-600
+      text-charcoal-900
+      hover:text-accent-700
       underline decoration-1 underline-offset-2
-      decoration-neutral-300 hover:decoration-accent-600
+      decoration-border hover:decoration-accent-700
     `,
     accent: `
       text-accent-600
@@ -34,8 +34,8 @@ export function Link({
       transition-colors duration-[150ms]
     `,
     subtle: `
-      text-neutral-600
-      hover:text-neutral-900
+      text-charcoal-700
+      hover:text-charcoal-900
       transition-colors duration-[150ms]
     `,
   };

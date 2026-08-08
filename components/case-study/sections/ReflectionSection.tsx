@@ -15,8 +15,8 @@ export function ReflectionSection({ reflection }: ReflectionSectionProps) {
         id="reflection"
       />
 
-      <div className="bg-neutral-50 border-l-4 border-neutral-900 p-8 rounded-r-lg">
-        <Body className="text-neutral-800 leading-relaxed italic">
+      <div className="bg-warmth-200 border-l-4 border-neutral-900 p-8 rounded-r-lg">
+        <Body className="text-charcoal-800 leading-relaxed italic">
           {reflection}
         </Body>
       </div>

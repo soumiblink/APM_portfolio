@@ -9,15 +9,15 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-200 bg-white">
+    <footer className="border-t border-border bg-charcoal-900">
       <Container>
         <div className="py-12 md:py-16">
           {/* Name and positioning */}
           <div className="text-center mb-8">
-            <div className="text-base font-semibold text-neutral-900 mb-1">
+            <div className="text-base font-semibold text-warmth-100 mb-1">
               Your Name
             </div>
-            <div className="text-sm text-neutral-600">
+            <div className="text-sm text-charcoal-400">
               Associate Product Manager
             </div>
           </div>
@@ -27,7 +27,7 @@ export function Footer() {
             <Link 
               href="mailto:your.email@example.com" 
               variant="subtle"
-              className="text-sm text-neutral-700 hover:text-accent-600 transition-colors"
+              className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               aria-label="Email"
             >
               Email
@@ -35,7 +35,7 @@ export function Footer() {
             <Link 
               href="https://linkedin.com/in/yourprofile" 
               variant="subtle"
-              className="text-sm text-neutral-700 hover:text-accent-600 transition-colors"
+              className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               external
               aria-label="LinkedIn profile"
             >
@@ -44,7 +44,7 @@ export function Footer() {
             <Link 
               href="https://github.com/yourusername" 
               variant="subtle"
-              className="text-sm text-neutral-700 hover:text-accent-600 transition-colors"
+              className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               external
               aria-label="GitHub profile"
             >
@@ -53,7 +53,7 @@ export function Footer() {
             <Link 
               href="/resume.pdf" 
               variant="subtle"
-              className="text-sm text-neutral-700 hover:text-accent-600 transition-colors"
+              className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               aria-label="Resume"
             >
               Resume
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-center text-xs text-neutral-500">
+          <div className="text-center text-xs text-charcoal-500">
             © {currentYear} · Built with thought
           </div>
         </div>

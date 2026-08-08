@@ -18,7 +18,7 @@ export function SolutionSection({ solution }: SolutionSectionProps) {
       />
 
       <div className="mb-8">
-        <Body className="text-neutral-800 leading-relaxed">
+        <Body className="text-charcoal-800 leading-relaxed">
           {solution.description}
         </Body>
       </div>
@@ -31,7 +31,7 @@ export function SolutionSection({ solution }: SolutionSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {solution.keyFeatures.map((feature, index) => (
             <Card key={index} padding="md" className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-accent-500 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+              <div className="w-8 h-8 rounded-full bg-accent-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
                 {index + 1}
               </div>
               <Body size="sm" className="pt-1">
@@ -48,7 +48,7 @@ export function SolutionSection({ solution }: SolutionSectionProps) {
           <Heading as="h4" className="mb-4">
             User Flow
           </Heading>
-          <Card padding="lg" className="bg-neutral-50">
+          <Card padding="lg" className="bg-warmth-200">
             <Body size="sm" muted>
               {solution.userFlow}
             </Body>
@@ -65,15 +65,15 @@ export function SolutionSection({ solution }: SolutionSectionProps) {
           <div className="space-y-4">
             {solution.visuals.map((visual, index) => (
               <Card key={index} padding="lg">
-                <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+                <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
                   {visual.type}
                 </Caption>
                 <Body size="sm">
                   {visual.description}
                 </Body>
                 {visual.url && (
-                  <div className="mt-4 p-4 bg-neutral-100 rounded text-center">
-                    <Caption className="text-neutral-500">
+                  <div className="mt-4 p-4 bg-warmth-200 rounded text-center">
+                    <Caption className="text-charcoal-500">
                       [Visual placeholder: {visual.url}]
                     </Caption>
                   </div>

@@ -35,10 +35,10 @@ export function Experience() {
           <div className="max-w-3xl mb-12">
             <Eyebrow className="mb-3">Experience</Eyebrow>
             <Heading as="h2" className="mb-4">
-              Where I've learned
+              Experience
             </Heading>
             <Body size="lg" muted>
-              A quick look at my path from engineering to product
+              Engineering experience that shaped how I think about product
             </Body>
           </div>
         </AnimatedSection>
@@ -50,28 +50,28 @@ export function Experience() {
               animation="fade" 
               delay={0.1 * index}
             >
-              <div className="relative pl-8 pb-12 last:pb-0 border-l-2 border-neutral-200">
+              <div className="relative pl-8 pb-12 last:pb-0 border-l-2 border-border-strong">
                 {/* Timeline dot */}
                 <div className="absolute left-0 top-0 -translate-x-1/2">
-                  <div className="w-4 h-4 rounded-full bg-accent-500 border-4 border-white"></div>
+                  <div className="w-4 h-4 rounded-full bg-accent-600 border-4 border-warmth-50"></div>
                 </div>
 
-                <Caption className="mb-2">{exp.period}</Caption>
+                <Caption className="mb-2 text-charcoal-500">{exp.period}</Caption>
                 
                 <Heading as="h3" className="mb-1">
                   {exp.role}
                 </Heading>
                 
-                <Body size="sm" className="font-medium text-neutral-600 mb-3">
+                <Body size="sm" className="font-medium text-charcoal-600 mb-3">
                   {exp.company}
                 </Body>
                 
-                <Body size="sm" className="mb-3">
+                <Body size="sm" className="mb-3 text-charcoal-700">
                   {exp.description}
                 </Body>
                 
-                <div className="bg-neutral-50 border-l-2 border-accent-500 pl-4 py-2">
-                  <Body size="sm" className="italic text-neutral-700">
+                <div className="bg-accent-50 border-l-2 border-accent-600 pl-4 py-2">
+                  <Body size="sm" className="text-charcoal-700">
                     → {exp.learnings}
                   </Body>
                 </div>

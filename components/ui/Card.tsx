@@ -25,15 +25,15 @@ export function Card({
   };
 
   const hoverStyles = hover 
-    ? 'hover:border-neutral-300 hover:shadow-md transition-all' 
+    ? 'hover:border-border-strong hover:shadow-md transition-all' 
     : '';
 
   return (
     <div 
       className={`
-        border border-neutral-200
+        border border-border
         rounded-lg
-        bg-white
+        bg-warmth-100
         shadow-sm
         ${paddingClasses[padding]}
         ${hoverStyles}

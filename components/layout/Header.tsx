@@ -27,7 +27,7 @@ export function Header() {
         fixed top-0 left-0 right-0 z-50
         transition-all duration-[250ms]
         ${scrolled 
-          ? 'bg-white/80 backdrop-blur-md border-b border-neutral-200' 
+          ? 'bg-warmth-100/90 backdrop-blur-md border-b border-border' 
           : 'bg-transparent'
         }
       `}
@@ -44,7 +44,7 @@ export function Header() {
           <Link 
             href="/" 
             variant="subtle"
-            className="text-lg font-semibold text-neutral-900 hover:text-neutral-700"
+            className="text-lg font-semibold text-charcoal-900 hover:text-charcoal-700"
           >
             Your Name
           </Link>

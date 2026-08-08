@@ -26,8 +26,8 @@ export function GoalsSection({ goals }: GoalsSectionProps) {
       )}
 
       <div className="space-y-6 mb-8">
-        <div className="bg-neutral-50 border-l-4 border-accent-500 p-6 rounded-r-lg">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+        <div className="bg-warmth-200 border-l-4 border-accent-600 p-6 rounded-r-lg">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
             Product Goal
           </Caption>
           <Body className="font-medium">
@@ -36,8 +36,8 @@ export function GoalsSection({ goals }: GoalsSectionProps) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-neutral-50 border border-neutral-200 p-6 rounded-lg">
-            <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+          <div className="bg-warmth-200 border border-border p-6 rounded-lg">
+            <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
               User Outcome
             </Caption>
             <Body size="sm">
@@ -45,8 +45,8 @@ export function GoalsSection({ goals }: GoalsSectionProps) {
             </Body>
           </div>
 
-          <div className="bg-neutral-50 border border-neutral-200 p-6 rounded-lg">
-            <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+          <div className="bg-warmth-200 border border-border p-6 rounded-lg">
+            <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
               Business Outcome
             </Caption>
             <Body size="sm">
@@ -57,7 +57,7 @@ export function GoalsSection({ goals }: GoalsSectionProps) {
       </div>
 
       <div className="mb-6">
-        <Caption className="uppercase tracking-wide text-neutral-600 mb-3 block">
+        <Caption className="uppercase tracking-wide text-charcoal-600 mb-3 block">
           Leading Indicators
         </Caption>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -74,7 +74,7 @@ export function GoalsSection({ goals }: GoalsSectionProps) {
 
       {goals.guardrailMetrics && goals.guardrailMetrics.length > 0 && (
         <div>
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-3 block">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-3 block">
             Guardrail Metrics
           </Caption>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

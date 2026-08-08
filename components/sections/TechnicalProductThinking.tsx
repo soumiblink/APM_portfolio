@@ -33,45 +33,55 @@ const capabilities = [
 
 export function TechnicalProductThinking() {
   return (
-    <Section spacing="xl" className="bg-neutral-900 text-white">
+    <Section spacing="xl" className="bg-warmth-50">
       <Container>
         <AnimatedSection animation="fade">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <Eyebrow className="mb-3 text-neutral-400">Technical Product Thinking</Eyebrow>
-            <Heading as="h2" className="mb-4 text-white">
-              Why I build
+          <div className="max-w-3xl mx-auto mb-12">
+            <Eyebrow className="mb-3">Technical Product Thinking</Eyebrow>
+            <Heading as="h2" className="mb-4">
+              Why my engineering background matters
             </Heading>
-            <Body size="lg" className="text-neutral-300">
+            <Body size="lg" muted>
               My engineering background isn't about writing production code — 
               it's about understanding what's possible, what's hard, and what's worth building.
             </Body>
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="max-w-4xl mx-auto space-y-8 mb-12">
           {capabilities.map((item, index) => (
             <AnimatedSection key={item.capability} animation="fade" delay={0.1 * index}>
-              <div className="bg-neutral-800 border border-neutral-700 rounded-lg p-6 h-full hover:border-neutral-600 transition-colors">
-                <Heading as="h4" className="text-white mb-3 text-lg">
-                  {item.capability}
-                </Heading>
-                
-                <Body size="sm" className="text-neutral-300 mb-4 leading-relaxed">
-                  {item.why}
-                </Body>
-                
-                <div className="pt-4 border-t border-neutral-700">
-                  <Caption className="text-neutral-500 mb-1 text-xs">
-                    Applied in:
+              <div className="flex gap-6 border-l-2 border-border-strong pl-6 py-2">
+                {/* Number */}
+                <div className="flex-shrink-0">
+                  <Caption className="text-accent-600 font-bold text-sm">
+                    {String(index + 1).padStart(2, '0')}
                   </Caption>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                    <Body size="sm" className="text-accent-400 font-medium">
-                      {item.example}
-                    </Body>
-                    <span className="text-neutral-600 hidden sm:inline">→</span>
-                    <Body size="sm" className="text-neutral-400">
-                      {item.connection}
-                    </Body>
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <Heading as="h4" className="mb-2 text-lg">
+                    {item.capability}
+                  </Heading>
+                  
+                  <Body size="sm" className="text-charcoal-700 mb-3 leading-relaxed">
+                    {item.why}
+                  </Body>
+                  
+                  <div className="flex flex-col gap-1">
+                    <Caption className="text-charcoal-500 text-xs">
+                      Applied in:
+                    </Caption>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                      <Body size="sm" className="text-accent-600 font-semibold">
+                        {item.example}
+                      </Body>
+                      <span className="text-charcoal-400 hidden sm:inline">→</span>
+                      <Body size="sm" className="text-charcoal-600">
+                        {item.connection}
+                      </Body>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,16 +90,16 @@ export function TechnicalProductThinking() {
         </div>
 
         <AnimatedSection animation="fade" delay={0.5}>
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-neutral-800 border-l-4 border-accent-600 rounded-r-lg p-6">
-              <Body className="text-neutral-100 mb-4 leading-relaxed">
-                <span className="font-semibold text-white">The advantage:</span> I can speak product, 
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-accent-50 border-l-4 border-accent-600 rounded-r-md p-6">
+              <Body className="text-charcoal-800 mb-3 leading-relaxed">
+                <span className="font-semibold text-charcoal-900">The advantage:</span> I can speak product, 
                 user, and engineering. When a designer proposes something impossible, I know. When 
                 an engineer says something will take 6 months, I can ask why. When we need to test 
                 an idea quickly, I can prototype it myself.
               </Body>
               
-              <Body size="sm" className="text-neutral-400">
+              <Body size="sm" className="text-charcoal-600">
                 Technical fluency makes me a faster, more effective PM. But I'm building products, 
                 not infrastructure.
               </Body>

@@ -34,7 +34,7 @@ export function LearningsSection({ learnings }: LearningsSectionProps) {
         </div>
 
         {/* What Surprised Me */}
-        <Card padding="lg" className="bg-neutral-50">
+        <Card padding="lg" className="bg-warmth-200">
           <Heading as="h4" className="mb-3">
             What Surprised Me
           </Heading>
@@ -54,7 +54,7 @@ export function LearningsSection({ learnings }: LearningsSectionProps) {
         </Card>
 
         {/* Next Investigation */}
-        <div className="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-r-lg">
+        <div className="bg-accent-50 border-l-4 border-accent-600 p-6 rounded-r-lg">
           <Caption className="uppercase tracking-wide text-accent-700 mb-2">
             What I'd Investigate Next
           </Caption>

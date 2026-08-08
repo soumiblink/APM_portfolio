@@ -41,13 +41,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </Heading>
 
       {/* One-line Problem */}
-      <Body size="sm" className="mb-6 text-neutral-700 leading-relaxed">
+      <Body size="sm" className="mb-6 text-charcoal-700 leading-relaxed">
         {project.tagline}
       </Body>
 
       {/* PM Competencies */}
       <div className="mb-6">
-        <Caption className="uppercase tracking-wide text-neutral-500 mb-2 block text-xs">
+        <Caption className="uppercase tracking-wide text-charcoal-500 mb-2 block text-xs">
           What I Demonstrated
         </Caption>
         <div className="flex flex-wrap gap-2">
@@ -71,16 +71,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Key Insight */}
       <div className="mb-6 flex-1">
-        <Caption className="uppercase tracking-wide text-neutral-500 mb-2 block text-xs">
+        <Caption className="uppercase tracking-wide text-charcoal-500 mb-2 block text-xs">
           The Interesting Part
         </Caption>
-        <Body size="sm" className="text-neutral-700 italic leading-relaxed">
+        <Body size="sm" className="text-charcoal-700 italic leading-relaxed">
           {project.keyInsight}
         </Body>
       </div>
 
       {/* CTA */}
-      <div className="pt-4 border-t border-neutral-200">
+      <div className="pt-4 border-t border-border">
         <Link 
           href={`/work/${project.slug}`}
           variant="accent"

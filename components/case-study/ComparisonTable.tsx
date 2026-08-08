@@ -14,8 +14,8 @@ export function ComparisonTable({ options }: ComparisonTableProps) {
           className={`
             border-2 rounded-lg p-6
             ${option.chosen 
-              ? 'border-accent-500 bg-accent-50' 
-              : 'border-neutral-200 bg-white'
+              ? 'border-accent-600 bg-accent-50' 
+              : 'border-border bg-warmth-100'
             }
           `}
         >
@@ -24,7 +24,7 @@ export function ComparisonTable({ options }: ComparisonTableProps) {
               <Heading as="h4" className="mb-2">
                 {option.name}
               </Heading>
-              <Body size="sm" className="text-neutral-700">
+              <Body size="sm" className="text-charcoal-700">
                 {option.description}
               </Body>
             </div>
@@ -35,22 +35,22 @@ export function ComparisonTable({ options }: ComparisonTableProps) {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 pt-4 border-t border-neutral-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 pt-4 border-t border-border">
             <div>
-              <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+              <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
                 Solves
               </Caption>
               <Body size="sm">{option.solves}</Body>
             </div>
 
             <div>
-              <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+              <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
                 Tradeoffs
               </Caption>
               <ul className="space-y-1">
                 {option.tradeoffs.map((tradeoff, i) => (
                   <li key={i}>
-                    <Body size="sm" className="text-neutral-700">
+                    <Body size="sm" className="text-charcoal-700">
                       • {tradeoff}
                     </Body>
                   </li>
@@ -59,13 +59,13 @@ export function ComparisonTable({ options }: ComparisonTableProps) {
             </div>
 
             <div>
-              <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+              <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
                 Risks
               </Caption>
               <ul className="space-y-1">
                 {option.risks.map((risk, i) => (
                   <li key={i}>
-                    <Body size="sm" className="text-neutral-700">
+                    <Body size="sm" className="text-charcoal-700">
                       • {risk}
                     </Body>
                   </li>

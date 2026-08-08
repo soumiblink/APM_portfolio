@@ -9,8 +9,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 /**
- * Button component - Editorial Product Studio design
- * Strong hierarchy, excellent contrast, restrained styling
+ * Button component - Premium editorial styling
+ * Primary uses accent color for sophisticated, confident CTAs
  */
 export function Button({ 
   children, 
@@ -23,25 +23,24 @@ export function Button({
   const baseStyles = `
     inline-flex items-center justify-center
     font-semibold
-    transition-all
-    focus-visible:outline-2 focus-visible:outline-offset-2
+    transition-all duration-200
+    focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600
     disabled:opacity-50 disabled:cursor-not-allowed
     no-underline
   `;
 
   const variants = {
     primary: `
-      bg-charcoal-900 text-white
-      hover:bg-charcoal-800
-      active:bg-charcoal-900
-      focus-visible:outline-accent-600
+      bg-accent-600 text-warmth-100
+      hover:bg-accent-700
+      active:bg-accent-800
+      shadow-sm hover:shadow
     `,
     secondary: `
-      bg-background-elevated text-charcoal-900
-      border-2 border-border-strong
-      hover:bg-warmth-100 hover:border-charcoal-400
+      bg-transparent text-charcoal-900
+      border-2 border-border
+      hover:bg-warmth-200 hover:border-border-strong
       active:border-charcoal-600
-      focus-visible:outline-accent-600
     `,
   };
 

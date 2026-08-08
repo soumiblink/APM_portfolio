@@ -23,7 +23,7 @@ export function CaseStudyLayout({
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 border-b border-neutral-200">
+      <section className="pt-32 pb-16 border-b border-border">
         <Container>
           <div className="max-w-4xl">
             <Button 
@@ -39,14 +39,14 @@ export function CaseStudyLayout({
               {name}
             </Display>
             
-            <Body size="lg" className="mb-8 text-neutral-700">
+            <Body size="lg" className="mb-8 text-charcoal-700">
               {tagline}
             </Body>
 
             {/* Overview Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-neutral-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-border">
               <div>
-                <Caption className="uppercase tracking-wide text-neutral-500 mb-1">
+                <Caption className="uppercase tracking-wide text-charcoal-500 mb-1">
                   Project
                 </Caption>
                 <Body size="sm" className="font-medium">
@@ -55,7 +55,7 @@ export function CaseStudyLayout({
               </div>
               
               <div>
-                <Caption className="uppercase tracking-wide text-neutral-500 mb-1">
+                <Caption className="uppercase tracking-wide text-charcoal-500 mb-1">
                   My Role
                 </Caption>
                 <Body size="sm" className="font-medium">
@@ -64,7 +64,7 @@ export function CaseStudyLayout({
               </div>
               
               <div>
-                <Caption className="uppercase tracking-wide text-neutral-500 mb-1">
+                <Caption className="uppercase tracking-wide text-charcoal-500 mb-1">
                   Type
                 </Caption>
                 <Body size="sm" className="font-medium">
@@ -73,7 +73,7 @@ export function CaseStudyLayout({
               </div>
               
               <div>
-                <Caption className="uppercase tracking-wide text-neutral-500 mb-1">
+                <Caption className="uppercase tracking-wide text-charcoal-500 mb-1">
                   Timeline
                 </Caption>
                 <Body size="sm" className="font-medium">
@@ -83,7 +83,7 @@ export function CaseStudyLayout({
             </div>
 
             <div className="mt-6">
-              <Caption className="uppercase tracking-wide text-neutral-500 mb-2">
+              <Caption className="uppercase tracking-wide text-charcoal-500 mb-2">
                 Skills Demonstrated
               </Caption>
               <div className="flex flex-wrap gap-2">
@@ -96,11 +96,11 @@ export function CaseStudyLayout({
             </div>
 
             {/* Product Thesis */}
-            <div className="mt-8 p-6 bg-neutral-50 border-l-4 border-accent-600 rounded-r-md">
-              <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+            <div className="mt-8 p-6 bg-warmth-200 border-l-4 border-accent-600 rounded-r-md">
+              <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
                 Product Thesis
               </Caption>
-              <Body className="font-medium italic text-neutral-900">
+              <Body className="font-medium italic text-charcoal-900">
                 {overview.productThesis}
               </Body>
             </div>

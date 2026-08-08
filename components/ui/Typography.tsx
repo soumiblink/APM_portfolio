@@ -11,7 +11,7 @@ export function Eyebrow({ children, className = '', ...props }: EyebrowProps) {
     <span 
       className={`
         text-xs font-semibold tracking-wide uppercase
-        text-neutral-500
+        text-charcoal-500
         ${className}
       `}
       {...props}
@@ -33,7 +33,7 @@ export function Display({ children, className = '', ...props }: DisplayProps) {
       className={`
         text-5xl md:text-6xl lg:text-7xl
         font-semibold tracking-tight
-        text-neutral-900
+        text-charcoal-900
         ${className}
       `}
       {...props}
@@ -70,7 +70,7 @@ export function Heading({
       className={`
         ${sizeClasses[as]}
         font-semibold tracking-tight
-        text-neutral-900
+        text-charcoal-900
         ${className}
       `}
       {...props}
@@ -101,7 +101,7 @@ export function Body({
     lg: 'text-lg md:text-xl',
   };
 
-  const colorClass = muted ? 'text-neutral-600' : 'text-neutral-700';
+  const colorClass = muted ? 'text-charcoal-500' : 'text-charcoal-700';
 
   return (
     <p 
@@ -129,7 +129,7 @@ export function Caption({ children, className = '', ...props }: CaptionProps) {
     <span 
       className={`
         text-sm
-        text-neutral-500
+        text-charcoal-500
         ${className}
       `}
       {...props}

@@ -40,19 +40,19 @@ function StrategyVisual({ data }: { data: any }) {
   if (data.from && data.to) {
     // Before/after display
     return (
-      <div className="bg-neutral-100 border border-neutral-200 rounded-lg p-4">
-        <Caption className="text-neutral-600 uppercase tracking-wide mb-3">
+      <div className="bg-warmth-200 border border-border rounded-lg p-4">
+        <Caption className="text-charcoal-600 uppercase tracking-wide mb-3">
           {data.label}
         </Caption>
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <Body size="sm" className="text-neutral-500 line-through">
+            <Body size="sm" className="text-charcoal-500 line-through">
               {data.from}
             </Body>
           </div>
           <div className="text-accent-600 font-bold">→</div>
           <div className="flex-1">
-            <Body size="sm" className="font-semibold text-neutral-900">
+            <Body size="sm" className="font-semibold text-charcoal-900">
               {data.to}
             </Body>
           </div>
@@ -66,14 +66,14 @@ function StrategyVisual({ data }: { data: any }) {
 
 function InsightVisual({ data }: { data: any }) {
   return (
-    <div className="bg-neutral-50 border-l-4 border-accent-500 rounded-r-lg p-4">
-      <Caption className="text-neutral-600 uppercase tracking-wide mb-2">
+    <div className="bg-warmth-200 border-l-4 border-accent-600 rounded-r-lg p-4">
+      <Caption className="text-charcoal-600 uppercase tracking-wide mb-2">
         {data.label}
       </Caption>
-      <Body size="sm" className="font-bold text-neutral-900 mb-1">
+      <Body size="sm" className="font-bold text-charcoal-900 mb-1">
         {data.stat}
       </Body>
-      <Caption className="text-neutral-500">
+      <Caption className="text-charcoal-500">
         {data.description}
       </Caption>
     </div>
@@ -82,14 +82,14 @@ function InsightVisual({ data }: { data: any }) {
 
 function ExperimentVisual({ data }: { data: any }) {
   return (
-    <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4">
-      <Caption className="text-neutral-600 uppercase tracking-wide mb-2">
+    <div className="bg-warmth-200 border border-border rounded-lg p-4">
+      <Caption className="text-charcoal-600 uppercase tracking-wide mb-2">
         {data.label}
       </Caption>
-      <Body size="sm" className="font-mono text-neutral-900 mb-1">
+      <Body size="sm" className="font-mono text-charcoal-900 mb-1">
         {data.stat}
       </Body>
-      <Caption className="text-neutral-500">
+      <Caption className="text-charcoal-500">
         {data.description}
       </Caption>
     </div>

@@ -31,7 +31,7 @@ export function ConstraintsSection({ constraints }: ConstraintsSectionProps) {
           <Card key={index} padding="md" className="flex items-start gap-3">
             <span className="text-2xl">{icons[constraint.category]}</span>
             <div>
-              <Caption className="uppercase tracking-wide text-neutral-600 mb-1">
+              <Caption className="uppercase tracking-wide text-charcoal-600 mb-1">
                 {constraint.category}
               </Caption>
               <Body size="sm">

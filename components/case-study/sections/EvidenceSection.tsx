@@ -14,7 +14,7 @@ export function EvidenceSection({ evidence }: EvidenceSectionProps) {
     data: 'bg-green-50 border-green-200 text-green-700',
     competitive: 'bg-purple-50 border-purple-200 text-purple-700',
     observation: 'bg-orange-50 border-orange-200 text-orange-700',
-    assumption: 'bg-neutral-100 border-neutral-300 text-neutral-700',
+    assumption: 'bg-warmth-200 border-border-strong text-charcoal-700',
   };
 
   return (
@@ -27,8 +27,8 @@ export function EvidenceSection({ evidence }: EvidenceSectionProps) {
       />
 
       {/* Credibility Note */}
-      <div className="mb-6 p-4 bg-neutral-50 border border-neutral-200 rounded-lg">
-        <Caption className="text-neutral-600">
+      <div className="mb-6 p-4 bg-warmth-200 border border-border rounded-lg">
+        <Caption className="text-charcoal-600">
           <strong>Note on authenticity:</strong> Items marked "Real" reflect actual research or data. 
           Items marked "Illustrative" show the type of analysis that would inform this decision.
         </Caption>
@@ -58,7 +58,7 @@ export function EvidenceSection({ evidence }: EvidenceSectionProps) {
             </Body>
 
             {item.source && (
-              <Caption className="mt-3 text-neutral-500">
+              <Caption className="mt-3 text-charcoal-500">
                 Source: {item.source}
               </Caption>
             )}

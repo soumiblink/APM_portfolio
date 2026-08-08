@@ -12,14 +12,14 @@ interface CompetencyIndicatorProps {
 export function CompetencyIndicator({ competency, subtle = false }: CompetencyIndicatorProps) {
   if (subtle) {
     return (
-      <span className="text-xs text-neutral-500 font-mono">
+      <span className="text-xs text-charcoal-500 font-mono">
         {competency}
       </span>
     );
   }
 
   return (
-    <Caption className="text-neutral-500">
+    <Caption className="text-charcoal-500">
       {competency}
     </Caption>
   );

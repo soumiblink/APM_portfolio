@@ -33,65 +33,66 @@ const process = [
 
 export function HowIThink() {
   return (
-    <Section spacing="lg" className="bg-neutral-900 text-white">
+    <Section spacing="xl" className="bg-warmth-50">
       <Container>
+        {/* Header */}
         <AnimatedSection animation="fade">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <Eyebrow className="mb-3 text-neutral-400">How I Think</Eyebrow>
-            <Heading as="h2" className="mb-4 text-white">
+            <Eyebrow className="mb-4">How I Think</Eyebrow>
+            <Heading as="h2" className="mb-6 text-3xl md:text-4xl">
               My product process
             </Heading>
-            <Body className="text-neutral-300">
+            <Body size="lg" className="text-charcoal-700 leading-relaxed">
               Product management is about making good decisions with incomplete information. 
               Here's how I approach it.
             </Body>
           </div>
         </AnimatedSection>
 
-        <div className="max-w-5xl mx-auto">
+        {/* Vertical cards */}
+        <div className="max-w-3xl mx-auto space-y-6">
           {process.map((item, index) => (
             <AnimatedSection 
               key={item.step} 
               animation="fade" 
               delay={0.1 * index}
             >
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12 last:mb-0">
-                {/* Step Number & Name */}
-                <div className="md:col-span-3">
-                  <div className="flex items-center gap-4 md:flex-col md:items-start">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-accent-500 text-neutral-900 font-semibold text-sm">
+              <div className="bg-warmth-100 border border-border rounded-lg p-8 hover:border-accent-600 hover:shadow-md transition-all duration-300">
+                {/* Top row: Number and Focus badge */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-accent-600 text-warmth-100 flex items-center justify-center text-lg font-bold flex-shrink-0">
                       {index + 1}
                     </div>
-                    <div>
-                      <Heading as="h3" className="text-xl text-white mb-1">
-                        {item.step}
-                      </Heading>
-                      <Body size="sm" className="text-accent-400 font-medium">
-                        {item.focus}
-                      </Body>
-                    </div>
+                    <span className="inline-block px-3 py-1 bg-warmth-200 text-charcoal-600 text-xs font-semibold uppercase tracking-wider rounded-full">
+                      {item.focus}
+                    </span>
                   </div>
                 </div>
+
+                {/* Step name */}
+                <Heading as="h3" className="mb-3 text-2xl">
+                  {item.step}
+                </Heading>
 
                 {/* Description */}
-                <div className="md:col-span-9">
-                  <div className="border-l-2 border-neutral-700 pl-6 py-2">
-                    <Body className="text-neutral-300">
-                      {item.description}
-                    </Body>
-                  </div>
-                </div>
-
-                {/* Connector for non-last items */}
-                {index < process.length - 1 && (
-                  <div className="md:col-span-3 flex justify-start md:justify-center">
-                    <div className="w-0.5 h-8 bg-neutral-700 ml-5 md:ml-0"></div>
-                  </div>
-                )}
+                <Body className="text-charcoal-700 leading-relaxed">
+                  {item.description}
+                </Body>
               </div>
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Bottom note */}
+        <AnimatedSection animation="fade" delay={0.6}>
+          <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-border text-center">
+            <Body size="sm" className="text-charcoal-600 italic">
+              This isn't a rigid framework — it's how I think about moving from ambiguity to action. 
+              Real product work is messier, and that's okay.
+            </Body>
+          </div>
+        </AnimatedSection>
       </Container>
     </Section>
   );

@@ -13,10 +13,10 @@ export function DecisionCard({ title, children, highlight = false, label }: Deci
   return (
     <Card 
       padding="lg" 
-      className={highlight ? 'border-accent-500 bg-accent-50' : ''}
+      className={highlight ? 'border-accent-600 bg-accent-50' : ''}
     >
       {label && (
-        <Caption className="uppercase tracking-wide text-neutral-500 mb-2">
+        <Caption className="uppercase tracking-wide text-charcoal-500 mb-2">
           {label}
         </Caption>
       )}

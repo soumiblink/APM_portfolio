@@ -16,7 +16,7 @@ export function ExperimentationSection({ experimentation }: ExperimentationSecti
           title="Measurement & Experimentation"
           id="experimentation"
         />
-        <Card padding="lg" className="bg-neutral-50">
+        <Card padding="lg" className="bg-warmth-200">
           <Body size="sm" muted>
             This project did not include a formal experimentation phase.
           </Body>
@@ -36,7 +36,7 @@ export function ExperimentationSection({ experimentation }: ExperimentationSecti
 
       <div className="space-y-6">
         {/* Hypothesis */}
-        <div className="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-r-lg">
+        <div className="bg-accent-50 border-l-4 border-accent-600 p-6 rounded-r-lg">
           <Caption className="uppercase tracking-wide text-accent-700 mb-2">
             Hypothesis
           </Caption>
@@ -47,7 +47,7 @@ export function ExperimentationSection({ experimentation }: ExperimentationSecti
 
         {/* Experiment Design */}
         <Card padding="lg">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
             Experiment
           </Caption>
           <Body size="sm">
@@ -57,7 +57,7 @@ export function ExperimentationSection({ experimentation }: ExperimentationSecti
 
         {/* Success Criteria */}
         <Card padding="lg">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-3">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-3">
             Success Criteria
           </Caption>
           <ul className="space-y-2">
@@ -71,8 +71,8 @@ export function ExperimentationSection({ experimentation }: ExperimentationSecti
         </Card>
 
         {/* Expected Behavior */}
-        <Card padding="lg" className="bg-neutral-50">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+        <Card padding="lg" className="bg-warmth-200">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
             Expected Behavior
           </Caption>
           <Body size="sm">
@@ -82,7 +82,7 @@ export function ExperimentationSection({ experimentation }: ExperimentationSecti
 
         {/* Rollout Approach */}
         <Card padding="lg">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-2">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-2">
             Rollout Approach
           </Caption>
           <Body size="sm">

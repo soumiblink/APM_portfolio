@@ -1,48 +1,91 @@
 import { Container } from '../layout/Container';
 import { Section } from '../ui/Section';
+import { Heading, Body } from '../ui/Typography';
 
 export function About() {
   return (
-    <Section spacing="lg" id="about" className="bg-warmth-100 border-y border-border">
-      <Container size="text">
-        {/* Editorial about section */}
-        <div className="max-w-[680px] mx-auto">
-          <div className="section-label mb-6">
-            About
+    <Section spacing="xl" id="about" className="bg-warmth-50 relative overflow-hidden">
+      {/* Subtle decorative element */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent-600 opacity-[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      
+      <Container>
+        <div className="max-w-6xl mx-auto relative">
+          {/* Editorial header with large typography */}
+          <div className="mb-16">
+            <div className="flex items-center gap-6 mb-8">
+              <div className="h-px flex-1 bg-border"></div>
+              <span className="text-xs font-mono uppercase tracking-[0.2em] text-charcoal-500">About Me</span>
+              <div className="h-px flex-1 bg-border"></div>
+            </div>
+            
+            <div className="text-center max-w-4xl mx-auto">
+              <Heading as="h2" className="text-5xl md:text-6xl mb-6 leading-[1.1] font-semibold">
+                Why I'm moving from<br />
+                <span className="text-accent-600">engineering to product</span>
+              </Heading>
+            </div>
           </div>
-          
-          <h2 className="text-3xl md:text-4xl font-semibold text-charcoal-900 mb-8 leading-snug">
-            Why I'm moving from engineering to product
-          </h2>
-          
-          <div className="space-y-5 text-base text-charcoal-700 leading-relaxed">
-            <p>
-              I started out building things. I studied computer science, explored AI/ML, 
-              and wrote a lot of code. But the more I built, the more I realized the 
-              hardest part wasn't the implementation — it was figuring out what to build 
-              in the first place.
-            </p>
-            
-            <p>
-              That's when I got interested in product management. I wanted to understand 
-              how to identify real problems, talk to users, prioritize ruthlessly, and 
-              make tradeoffs that actually matter. My technical background helps me work 
-              better with engineers, but what drives me is solving problems people care about.
-            </p>
-            
-            <p>
-              I'm looking for APM opportunities where I can learn from experienced PMs, 
-              ship real products, and grow my product instincts. I care about thoughtful 
-              product work more than titles.
-            </p>
-            
-            <div className="mt-8 pt-6 border-t border-border-strong">
-              <p className="text-sm text-charcoal-600 leading-relaxed">
-                <span className="font-semibold text-charcoal-900">A note on this portfolio:</span> Everything 
-                here reflects real thinking and honest constraints. Where I don't have data, I say so. 
-                Where projects are speculative, they're labeled as such. I'd rather show clear thinking 
-                with honest limitations than fabricate impressive metrics.
-              </p>
+
+          {/* Three-column responsive layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Column 1 */}
+            <div className="space-y-4">
+              <div className="text-6xl font-bold text-accent-600 opacity-20">01</div>
+              <Heading as="h3" className="text-2xl mb-4">
+                I started as a builder
+              </Heading>
+              <Body className="text-charcoal-700 leading-relaxed">
+                I studied computer science, explored AI/ML, and wrote a lot of code. 
+                But the more I built, the more I realized the hardest part wasn't the 
+                implementation — it was figuring out what to build in the first place.
+              </Body>
+            </div>
+
+            {/* Column 2 */}
+            <div className="space-y-4 md:pt-12">
+              <div className="text-6xl font-bold text-accent-600 opacity-20">02</div>
+              <Heading as="h3" className="text-2xl mb-4">
+                I discovered product thinking
+              </Heading>
+              <Body className="text-charcoal-700 leading-relaxed">
+                I wanted to understand how to identify real problems, talk to users, 
+                prioritize ruthlessly, and make tradeoffs that actually matter. My technical 
+                background helps me work better with engineers, but what drives me is solving 
+                problems people care about.
+              </Body>
+            </div>
+
+            {/* Column 3 */}
+            <div className="space-y-4">
+              <div className="text-6xl font-bold text-accent-600 opacity-20">03</div>
+              <Heading as="h3" className="text-2xl mb-4">
+                Now I'm seeking opportunity
+              </Heading>
+              <Body className="text-charcoal-700 leading-relaxed">
+                I'm looking for APM opportunities where I can learn from experienced PMs, 
+                ship real products, and grow my product instincts. I care about thoughtful 
+                product work more than titles.
+              </Body>
+            </div>
+          </div>
+
+          {/* Integrity statement - sophisticated pull quote style */}
+          <div className="max-w-4xl mx-auto relative">
+            <div className="absolute -left-4 top-0 bottom-0 w-1 bg-accent-600"></div>
+            <div className="pl-12 pr-8 py-8 bg-warmth-100 rounded-r-lg">
+              <svg className="w-8 h-8 text-accent-600 opacity-30 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+              <Body className="text-xl text-charcoal-800 leading-relaxed mb-4 font-light italic">
+                Everything here reflects real thinking and honest constraints. Where I don't have data, 
+                I say so. Where projects are speculative, they're labeled as such.
+              </Body>
+              <div className="flex items-center gap-3">
+                <div className="h-px flex-1 bg-border"></div>
+                <Body size="sm" className="text-charcoal-600 font-medium">
+                  A note on integrity
+                </Body>
+              </div>
             </div>
           </div>
         </div>

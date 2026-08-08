@@ -10,9 +10,9 @@ interface MetricBlockProps {
 
 export function MetricBlock({ label, value, description, type = 'target' }: MetricBlockProps) {
   const bgColors = {
-    target: 'bg-neutral-50 border-neutral-200',
+    target: 'bg-warmth-200 border-border',
     actual: 'bg-accent-50 border-accent-200',
-    guardrail: 'bg-neutral-100 border-neutral-300',
+    guardrail: 'bg-warmth-200 border-border-strong',
   };
 
   const badgeVariants = {
@@ -30,7 +30,7 @@ export function MetricBlock({ label, value, description, type = 'target' }: Metr
   return (
     <div className={`border rounded-lg p-4 ${bgColors[type]}`}>
       <div className="flex items-start justify-between mb-2">
-        <Caption className="uppercase tracking-wide text-neutral-600">
+        <Caption className="uppercase tracking-wide text-charcoal-600">
           {label}
         </Caption>
         <Badge variant={badgeVariants[type]} className="text-xs">
@@ -41,7 +41,7 @@ export function MetricBlock({ label, value, description, type = 'target' }: Metr
         {value}
       </Body>
       {description && (
-        <Caption className="text-neutral-600">
+        <Caption className="text-charcoal-600">
           {description}
         </Caption>
       )}

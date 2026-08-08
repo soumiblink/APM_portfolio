@@ -10,9 +10,9 @@ interface ProductQuestionProps {
  */
 export function ProductQuestion({ question }: ProductQuestionProps) {
   return (
-    <div className="my-8 pl-6 border-l-2 border-neutral-300">
-      <Body size="sm" className="text-neutral-600 italic">
-        <span className="font-semibold text-neutral-700 not-italic">Product question:</span> {question}
+    <div className="my-8 pl-6 border-l-2 border-border-strong">
+      <Body size="sm" className="text-charcoal-600 italic">
+        <span className="font-semibold text-charcoal-700 not-italic">Product question:</span> {question}
       </Body>
     </div>
   );

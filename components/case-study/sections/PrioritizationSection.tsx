@@ -33,8 +33,8 @@ export function PrioritizationSection({ prioritization }: PrioritizationSectionP
       </div>
 
       {prioritization.visualization && (
-        <div className="mt-6 p-6 bg-neutral-50 border border-neutral-200 rounded-lg">
-          <Caption className="uppercase tracking-wide text-neutral-600 mb-3">
+        <div className="mt-6 p-6 bg-warmth-200 border border-border rounded-lg">
+          <Caption className="uppercase tracking-wide text-charcoal-600 mb-3">
             Prioritization Visualization
           </Caption>
           <Body size="sm" muted>

@@ -17,16 +17,16 @@ export function Badge({
 }: BadgeProps) {
   const variants = {
     default: `
-      bg-neutral-100 text-neutral-700
-      border border-neutral-200
+      bg-warmth-200 text-charcoal-700
+      border border-border
     `,
     accent: `
       bg-accent-50 text-accent-800
       border border-accent-200
     `,
     outline: `
-      bg-white text-neutral-600
-      border border-neutral-300
+      bg-warmth-100 text-charcoal-700
+      border border-border
     `,
   };
 
