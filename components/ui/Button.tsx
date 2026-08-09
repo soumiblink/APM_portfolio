@@ -31,7 +31,7 @@ export function Button({
 
   const variants = {
     primary: `
-      bg-accent-600 text-warmth-100
+      bg-accent-600
       hover:bg-accent-700
       active:bg-accent-800
       shadow-sm hover:shadow
@@ -51,17 +51,20 @@ export function Button({
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} rounded-md ${className}`.trim().replace(/\s+/g, ' ');
+  
+  // Force white text for primary buttons
+  const style = variant === 'primary' ? { color: '#ffffff' } : undefined;
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} style={style}>
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} style={style} {...props}>
       {children}
     </button>
   );
