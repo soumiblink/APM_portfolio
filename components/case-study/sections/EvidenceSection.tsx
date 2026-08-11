@@ -1,5 +1,4 @@
 import { Body, Caption } from '../../ui/Typography';
-import { Card } from '../../ui/Card';
 import { Badge } from '../../ui/Badge';
 import { SectionHeader } from '../SectionHeader';
 import { Evidence } from '@/lib/case-study-types';
@@ -9,12 +8,43 @@ interface EvidenceSectionProps {
 }
 
 export function EvidenceSection({ evidence }: EvidenceSectionProps) {
-  const typeColors: Record<string, string> = {
-    research: 'bg-blue-50 border-blue-200 text-blue-700',
-    data: 'bg-green-50 border-green-200 text-green-700',
-    competitive: 'bg-purple-50 border-purple-200 text-purple-700',
-    observation: 'bg-orange-50 border-orange-200 text-orange-700',
-    assumption: 'bg-warmth-200 border-border-strong text-charcoal-700',
+  const typeStyles: Record<string, { border: string; bg: string; text: string; badge: string }> = {
+    research: { 
+      border: 'border-l-blue-600', 
+      bg: 'bg-blue-50/50', 
+      text: 'text-blue-900',
+      badge: 'bg-blue-100 text-blue-700 border-blue-300'
+    },
+    data: { 
+      border: 'border-l-green-600', 
+      bg: 'bg-green-50/50', 
+      text: 'text-green-900',
+      badge: 'bg-green-100 text-green-700 border-green-300'
+    },
+    competitive: { 
+      border: 'border-l-purple-600', 
+      bg: 'bg-purple-50/50', 
+      text: 'text-purple-900',
+      badge: 'bg-purple-100 text-purple-700 border-purple-300'
+    },
+    user: { 
+      border: 'border-l-accent-600', 
+      bg: 'bg-accent-50/50', 
+      text: 'text-accent-900',
+      badge: 'bg-accent-100 text-accent-700 border-accent-300'
+    },
+    observation: { 
+      border: 'border-l-orange-600', 
+      bg: 'bg-orange-50/50', 
+      text: 'text-orange-900',
+      badge: 'bg-orange-100 text-orange-700 border-orange-300'
+    },
+    assumption: { 
+      border: 'border-l-charcoal-400', 
+      bg: 'bg-warmth-100/50', 
+      text: 'text-charcoal-800',
+      badge: 'bg-warmth-200 text-charcoal-700 border-charcoal-300'
+    },
   };
 
   return (
@@ -27,43 +57,61 @@ export function EvidenceSection({ evidence }: EvidenceSectionProps) {
       />
 
       {/* Credibility Note */}
-      <div className="mb-6 p-4 bg-warmth-200 border border-border rounded-lg">
-        <Caption className="text-charcoal-600">
-          <strong>Note on authenticity:</strong> Items marked "Real" reflect actual research or data. 
+      <div className="mb-8 p-6 bg-warmth-100 border-l-4 border-charcoal-900 rounded-r-lg">
+        <Caption className="text-charcoal-700 leading-relaxed">
+          <strong className="text-charcoal-900">Note on authenticity:</strong> Items marked "Real" reflect actual research or competitive data. 
           Items marked "Illustrative" show the type of analysis that would inform this decision.
         </Caption>
       </div>
 
-      <div className="space-y-4">
-        {evidence.map((item, index) => (
-          <Card key={index} padding="lg">
-            <div className="flex items-start justify-between mb-3">
-              <Badge 
-                variant="outline" 
-                className={`text-xs ${typeColors[item.type]}`}
-              >
-                {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
-              </Badge>
-              <Badge variant={item.isReal ? 'accent' : 'default'} className="text-xs">
-                {item.isReal ? 'Real' : 'Illustrative'}
-              </Badge>
+      <div className="space-y-6">
+        {evidence.map((item, index) => {
+          const style = typeStyles[item.type] || typeStyles.assumption;
+          return (
+            <div 
+              key={index} 
+              className={`group relative bg-white ${style.bg} border-l-4 ${style.border} rounded-r-lg p-8 hover:shadow-xl transition-all duration-300`}
+            >
+              {/* Header with badges */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <Badge 
+                    variant="outline" 
+                    className={`text-[10px] uppercase tracking-wider font-semibold border ${style.badge}`}
+                  >
+                    {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
+                  </Badge>
+                  <span className="text-charcoal-300 font-bold">·</span>
+                  <Badge 
+                    variant={item.credibility === 'real' ? 'accent' : 'default'} 
+                    className="text-[10px] uppercase tracking-wider font-semibold"
+                  >
+                    {item.credibility === 'real' ? 'Real' : 'Illustrative'}
+                  </Badge>
+                </div>
+              </div>
+
+              {/* Title */}
+              <div className={`text-lg font-bold mb-3 ${style.text}`}>
+                {item.description}
+              </div>
+
+              {/* Details */}
+              <Body size="sm" className="text-charcoal-600 leading-relaxed mb-4">
+                {item.details}
+              </Body>
+
+              {/* Source footer */}
+              {item.source && (
+                <div className="pt-4 border-t border-charcoal-200/50">
+                  <Caption className="text-charcoal-500 italic">
+                    Source: {item.source}
+                  </Caption>
+                </div>
+              )}
             </div>
-
-            <Body className="font-semibold mb-2">
-              {item.title}
-            </Body>
-
-            <Body size="sm" muted>
-              {item.description}
-            </Body>
-
-            {item.source && (
-              <Caption className="mt-3 text-charcoal-500">
-                Source: {item.source}
-              </Caption>
-            )}
-          </Card>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

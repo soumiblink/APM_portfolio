@@ -13,11 +13,11 @@ export function SelectedWork() {
           <div className="max-w-3xl mb-12">
             <Eyebrow className="mb-3">Selected Work</Eyebrow>
             <Heading as="h2" className="mb-4">
-              Product case studies
+              Projects & case studies
             </Heading>
             <Body size="lg" muted>
-              Four projects demonstrating discovery, strategy, prioritization, and execution. 
-              Each shows different PM competencies applied to real problems.
+              Product work demonstrating discovery, strategy, prioritization, and execution. 
+              Each project shows different PM competencies applied to real problems.
             </Body>
           </div>
         </AnimatedSection>

@@ -91,7 +91,36 @@ export const projects: ProjectData[] = [
     metadata: {
       timeline: '3 weeks',
       industry: 'Consumer Tech',
-      featured: true, // Mark as featured project
+      featured: true,
+    }
+  },
+  {
+    slug: 'notion-ai-foresight',
+    name: 'Notion AI Foresight',
+    tagline: 'Notion AI helps you write about work, but cannot tell if it is on track.',
+    type: 'AI Product',
+    status: 'Speculative Case Study',
+    competencies: [
+      'Product Strategy',
+      'AI Product Thinking',
+      'Competitive Analysis',
+      'Prioritization',
+    ],
+    keyInsight: "Notion's advantage isn't out-integrating competitors—it's reasoning over content it already owns to surface delivery risk before it becomes a crisis.",
+    technicalContext: 'Designed cross-object reasoning architecture; understood when AI should assist vs. act autonomously',
+    visual: {
+      type: 'strategy',
+      data: {
+        label: 'Strategic Bet',
+        from: 'Writing Assistant',
+        to: 'Delivery Foresight'
+      }
+    },
+    cta: 'Read the case study →',
+    metadata: {
+      timeline: 'Full PRD & rollout strategy',
+      industry: 'Enterprise SaaS / AI',
+      featured: true,
     }
   },
   {
