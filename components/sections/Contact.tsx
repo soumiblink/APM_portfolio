@@ -4,7 +4,7 @@ import { Section } from '../ui/Section';
 
 export function Contact() {
   return (
-    <Section spacing="xl">
+    <Section spacing="xl" id="contact">
       <Container size="text">
         {/* Strong typographic CTA */}
         <div className="max-w-[680px]">
@@ -23,7 +23,7 @@ export function Contact() {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
-              href="mailto:your.email@example.com"
+              href="mailto:soumi4717@gmail.com"
               variant="primary"
               size="lg"
             >
@@ -31,7 +31,7 @@ export function Contact() {
             </Button>
             
             <Button
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/soumi-ghosh-sep"
               variant="secondary"
               size="lg"
             >

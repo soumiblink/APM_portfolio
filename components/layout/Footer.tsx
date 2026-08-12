@@ -15,17 +15,17 @@ export function Footer() {
           {/* Name and positioning */}
           <div className="text-center mb-8">
             <div className="text-base font-semibold text-warmth-100 mb-1">
-              Your Name
+              Soumi Ghosh
             </div>
             <div className="text-sm text-charcoal-400">
-              Associate Product Manager
+              Aspiring Product Manager
             </div>
           </div>
 
           {/* Contact links - horizontal on all sizes */}
           <div className="flex items-center justify-center gap-6 mb-8">
             <Link 
-              href="mailto:your.email@example.com" 
+              href="mailto:soumi4717@gmail.com" 
               variant="subtle"
               className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               aria-label="Email"
@@ -33,7 +33,7 @@ export function Footer() {
               Email
             </Link>
             <Link 
-              href="https://linkedin.com/in/yourprofile" 
+              href="https://www.linkedin.com/in/soumi-ghosh-sep" 
               variant="subtle"
               className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               external
@@ -42,7 +42,7 @@ export function Footer() {
               LinkedIn
             </Link>
             <Link 
-              href="https://github.com/yourusername" 
+              href="https://github.com/soumiblink/" 
               variant="subtle"
               className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               external

@@ -10,7 +10,7 @@ export function Hero() {
         <div className="max-w-[900px]">
           {/* Small editorial label */}
           <div className="section-label mb-6">
-            Associate Product Manager
+            Aspiring Product Manager
           </div>
           
           {/* Large editorial headline */}

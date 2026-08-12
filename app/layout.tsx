@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Associate Product Manager",
+  title: "Soumi Ghosh | Aspiring Product Manager",
   description: "Product manager with CS/AI background building thoughtful solutions to real problems.",
   keywords: ["product management", "APM", "product strategy", "AI products", "user research"],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Soumi Ghosh" }],
   openGraph: {
-    title: "Your Name | Associate Product Manager",
+    title: "Soumi Ghosh | Aspiring Product Manager",
     description: "Product manager with CS/AI background building thoughtful solutions to real problems.",
     type: "website",
   },

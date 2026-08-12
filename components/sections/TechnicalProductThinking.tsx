@@ -2,32 +2,27 @@ import { Container } from '../layout/Container';
 import { Heading, Body, Eyebrow, Caption } from '../ui/Typography';
 import { Section } from '../ui/Section';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { Card } from '../ui/Card';
 
 const capabilities = [
   {
+    icon: '⚙️',
     capability: 'Understand technical constraints',
-    why: "I know when an idea is technically hard vs. technically impossible. That changes prioritization.",
-    example: 'LinkedIn Job Navigator',
-    connection: 'Evaluated whether relevance ranking was feasible vs. building from scratch'
+    why: "I know when an idea is technically hard vs. technically impossible. That changes prioritization."
   },
   {
+    icon: '🔨',
     capability: 'Prototype product ideas',
-    why: 'I can build quick prototypes to test assumptions instead of waiting for eng resources.',
-    example: 'FeedbackLens',
-    connection: 'Built a working NLP pipeline to validate that feedback clustering actually helped PMs'
+    why: 'I can build quick prototypes to test assumptions instead of waiting for eng resources.'
   },
   {
+    icon: '🤖',
     capability: 'Evaluate AI capabilities',
-    why: "I've built with AI/ML enough to know what it can and can't do. That prevents overcommitting.",
-    example: 'Notion AI',
-    connection: 'Understood the difference between retrieval-augmented generation and pure completion'
+    why: "I've built with AI/ML enough to know what it can and can't do. That prevents overcommitting."
   },
   {
+    icon: '🎯',
     capability: 'Make realistic MVP decisions',
-    why: "I know what's hard to build and what's not. That makes MVP scoping more accurate.",
-    example: 'AI Experiment Hub',
-    connection: 'Designed an experimentation framework that could ship in weeks, not quarters'
+    why: "I know what's hard to build and what's not. That makes MVP scoping more accurate."
   },
 ];
 
@@ -48,40 +43,27 @@ export function TechnicalProductThinking() {
           </div>
         </AnimatedSection>
 
-        <div className="max-w-4xl mx-auto space-y-8 mb-12">
+        <div className="max-w-4xl mx-auto space-y-6 mb-12">
           {capabilities.map((item, index) => (
             <AnimatedSection key={item.capability} animation="fade" delay={0.1 * index}>
-              <div className="flex gap-6 border-l-2 border-border-strong pl-6 py-2">
-                {/* Number */}
-                <div className="flex-shrink-0">
-                  <Caption className="text-accent-600 font-bold text-sm">
-                    {String(index + 1).padStart(2, '0')}
-                  </Caption>
-                </div>
-                
-                {/* Content */}
-                <div className="flex-1">
-                  <Heading as="h4" className="mb-2 text-lg">
-                    {item.capability}
-                  </Heading>
-                  
-                  <Body size="sm" className="text-charcoal-700 mb-3 leading-relaxed">
-                    {item.why}
-                  </Body>
-                  
-                  <div className="flex flex-col gap-1">
-                    <Caption className="text-charcoal-500 text-xs">
-                      Applied in:
-                    </Caption>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                      <Body size="sm" className="text-accent-600 font-semibold">
-                        {item.example}
-                      </Body>
-                      <span className="text-charcoal-400 hidden sm:inline">→</span>
-                      <Body size="sm" className="text-charcoal-600">
-                        {item.connection}
-                      </Body>
+              <div className="group bg-white border-l-4 border-charcoal-900 rounded-r-lg p-6 hover:border-accent-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex gap-5">
+                  {/* Icon circle */}
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-accent-100 flex items-center justify-center text-2xl group-hover:bg-accent-600 group-hover:scale-110 transition-all duration-300">
+                      {item.icon}
                     </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1">
+                    <Heading as="h4" className="mb-2 text-lg text-charcoal-900">
+                      {item.capability}
+                    </Heading>
+                    
+                    <Body size="sm" className="text-charcoal-700 leading-relaxed">
+                      {item.why}
+                    </Body>
                   </div>
                 </div>
               </div>

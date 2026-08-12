@@ -124,34 +124,6 @@ export const projects: ProjectData[] = [
     }
   },
   {
-    slug: 'notion-ai',
-    name: 'Notion AI — AI Operating System',
-    tagline: 'Current AI tools feel like features, not a coherent system.',
-    type: 'AI Product',
-    status: 'Speculative Case Study',
-    competencies: [
-      'Product Vision',
-      'AI Product Thinking',
-      'Competitive Analysis',
-      'Product Strategy',
-    ],
-    keyInsight: "Explored what Notion's AI could become if it prioritized connecting knowledge over generating text.",
-    technicalContext: 'Applied AI/ML understanding to differentiate RAG from completion models',
-    visual: {
-      type: 'strategy',
-      data: {
-        label: 'Vision Shift',
-        from: 'AI Writer',
-        to: 'AI Operating System'
-      }
-    },
-    cta: 'Explore the product thinking →',
-    metadata: {
-      timeline: '2 weeks',
-      industry: 'Productivity / AI',
-    }
-  },
-  {
     slug: 'feedbacklens',
     name: 'FeedbackLens',
     tagline: "Product teams drown in feedback but can't find patterns.",

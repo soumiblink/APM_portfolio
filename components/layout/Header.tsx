@@ -46,7 +46,7 @@ export function Header() {
             variant="subtle"
             className="text-lg font-semibold text-charcoal-900 hover:text-charcoal-700"
           >
-            Your Name
+            Soumi Ghosh
           </Link>
 
           {/* Navigation Links */}
@@ -54,16 +54,37 @@ export function Header() {
             <Link 
               href="/#work" 
               variant="subtle"
-              className="text-sm font-medium hidden sm:inline"
+              className="text-sm font-medium hidden lg:inline"
             >
               Work
             </Link>
             <Link 
+              href="/#how-i-think" 
+              variant="subtle"
+              className="text-sm font-medium hidden lg:inline"
+            >
+              Thinking
+            </Link>
+            <Link 
+              href="/#experience" 
+              variant="subtle"
+              className="text-sm font-medium hidden md:inline"
+            >
+              Experience
+            </Link>
+            <Link 
               href="/#about" 
+              variant="subtle"
+              className="text-sm font-medium hidden md:inline"
+            >
+              About
+            </Link>
+            <Link 
+              href="/#contact" 
               variant="subtle"
               className="text-sm font-medium hidden sm:inline"
             >
-              About
+              Contact
             </Link>
             <Button
               href="/resume.pdf"

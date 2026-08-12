@@ -83,22 +83,22 @@ export function EvidenceSection({ evidence }: EvidenceSectionProps) {
                   </Badge>
                   <span className="text-charcoal-300 font-bold">·</span>
                   <Badge 
-                    variant={item.credibility === 'real' ? 'accent' : 'default'} 
+                    variant={item.isReal ? 'accent' : 'default'} 
                     className="text-[10px] uppercase tracking-wider font-semibold"
                   >
-                    {item.credibility === 'real' ? 'Real' : 'Illustrative'}
+                    {item.isReal ? 'Real' : 'Illustrative'}
                   </Badge>
                 </div>
               </div>
 
               {/* Title */}
               <div className={`text-lg font-bold mb-3 ${style.text}`}>
-                {item.description}
+                {item.title}
               </div>
 
               {/* Details */}
               <Body size="sm" className="text-charcoal-600 leading-relaxed mb-4">
-                {item.details}
+                {item.description}
               </Body>
 
               {/* Source footer */}

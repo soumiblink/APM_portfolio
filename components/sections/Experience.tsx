@@ -5,25 +5,46 @@ import { AnimatedSection } from '../ui/AnimatedSection';
 
 const experiences = [
   {
-    role: 'Software Engineer Intern',
-    company: 'Tech Company',
-    period: 'Summer 2025',
-    description: 'Built features for internal tools, learned how engineering teams prioritize work, and saw firsthand how product decisions impact implementation.',
-    learnings: 'Technical feasibility matters. Good PMs understand engineering constraints.',
+    role: 'Software Development Engineering Intern',
+    company: 'BlackCoffer',
+    period: 'May - June 2026',
+    highlights: [
+      'Integrated sequential backend APIs in a React Native + Expo app for enterprise onboarding workflows, reducing API execution failures by 35%',
+      'Optimized app stability using Gradle, Metro bundler, and Android runtime issues, reducing build time by 40%'
+    ],
+    learnings: 'API integration and mobile app optimization require deep understanding of runtime behavior and build processes.',
   },
   {
-    role: 'AI/ML Research Assistant',
-    company: 'University Lab',
-    period: '2024 - 2025',
-    description: 'Worked on NLP projects, explored AI model behavior, and contributed to research on feedback classification systems.',
-    learnings: 'AI is powerful but not magic. Real impact comes from solving the right problem.',
+    role: 'Full Stack Developer Intern',
+    company: 'Jabsz Gaming Studio',
+    period: 'August - November 2025',
+    highlights: [
+      'Developed a multi-game web application (12+ games) with optimized state management and modular architecture, achieving 40% faster load times',
+      'Designed a 3-tier difficulty system with dynamic logic and scoring, increasing average session time by 30%',
+      'Built an AI-powered smart farming platform integrating weather, soil analysis, crop recommendations, LLM chatbot, and 6-month price forecasting, improving decision efficiency by 35%'
+    ],
+    learnings: 'User engagement comes from thoughtful feature design. Performance optimization and architecture decisions directly impact user experience.',
   },
   {
-    role: 'CS/AI Student',
-    company: 'University',
-    period: '2022 - 2026',
-    description: 'Studied computer science with a focus on AI/ML, took product design and HCI courses, and built side projects to explore product thinking.',
-    learnings: 'Technical depth is an advantage in PM. Building things teaches you what matters.',
+    role: 'Full Stack Developer (Freelancer)',
+    company: 'Zesframe',
+    period: 'March - September 2025',
+    highlights: [
+      'Improved website responsiveness by 40% using Next.js and server-side rendering to prevent data leaks',
+      'Integrated backend with React components and maintained 100% version control using Git and GitHub',
+      'Managed deployment and hosting, ensuring 99.9% uptime with optimized workflows and infrastructure monitoring'
+    ],
+    learnings: 'End-to-end ownership of a product teaches you how technical decisions impact user experience and business reliability.',
+  },
+  {
+    role: 'Product Manager (Freelancer)',
+    company: 'Zesframe',
+    period: 'March - September 2025',
+    highlights: [
+      'Defined product roadmap and feature prioritization based on client requirements and technical feasibility, ensuring alignment between business goals and implementation',
+      'Led cross-functional coordination between design, development, and stakeholders to deliver projects on time while balancing scope, quality, and technical constraints'
+    ],
+    learnings: 'Product management is about making trade-offs. Understanding both user needs and technical limitations helps ship the right solution.',
   },
 ];
 
@@ -62,13 +83,21 @@ export function Experience() {
                   {exp.role}
                 </Heading>
                 
-                <Body size="sm" className="font-medium text-charcoal-600 mb-3">
+                <Body size="sm" className="font-medium text-charcoal-600 mb-4">
                   {exp.company}
                 </Body>
                 
-                <Body size="sm" className="mb-3 text-charcoal-700">
-                  {exp.description}
-                </Body>
+                {/* Bullet points for highlights */}
+                <ul className="space-y-2 mb-4">
+                  {exp.highlights.map((highlight, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-accent-600 mt-1.5 flex-shrink-0">•</span>
+                      <Body size="sm" className="text-charcoal-700 leading-relaxed">
+                        {highlight}
+                      </Body>
+                    </li>
+                  ))}
+                </ul>
                 
                 <div className="bg-accent-50 border-l-2 border-accent-600 pl-4 py-2">
                   <Body size="sm" className="text-charcoal-700">
