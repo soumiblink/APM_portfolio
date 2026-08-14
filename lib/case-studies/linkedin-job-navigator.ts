@@ -6,6 +6,7 @@ export const linkedInJobNavigator: FullCaseStudy = {
   tagline: 'Early-career professionals are churning off LinkedIn Jobs before its identity graph has enough data about them to work',
   type: 'Product Management Case Study',
   status: 'Portfolio Project',
+  notionLink: 'https://app.notion.com/p/Redesigning-LinkedIn-Jobs-for-Early-Career-Professionals-3bad02fd354f8027aafef106b1aa3af8?source=copy_link',
   
   caseStudy: {
     overview: {

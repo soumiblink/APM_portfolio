@@ -217,6 +217,31 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       tagline={tagline}
       overview={content.overview}
     >
+      {/* Notion Link Banner */}
+      {caseStudy.notionLink && (
+        <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+                Full Case Study
+              </Caption>
+              <Body size="sm" className="text-charcoal-700">
+                Read the complete case study with all details in Notion
+              </Body>
+            </div>
+            <Button 
+              href={caseStudy.notionLink}
+              variant="primary"
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              <span>View in Notion</span>
+              <span>→</span>
+            </Button>
+          </div>
+        </div>
+      )}
+      
       <ProblemSection problem={content.problem} />
       
       <ProductQuestion question="What would need to be true for this to work at LinkedIn scale?" />

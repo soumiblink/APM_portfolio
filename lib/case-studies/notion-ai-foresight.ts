@@ -7,7 +7,7 @@ export const notionAiForesight: any = {
   role: 'Aspiring Product Manager (AI)',
   timeline: 'July 2026',
   type: 'Portfolio Case Study',
-  notionLink: 'https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fapp.notion.com%2Fp%2FReimagining-Notion-AI-as-the-AI-Operating-System-for-Modern-Teams-3b7d02fd354f804d920dd07a547f0b7e%3Fsource%3Dcopy_link&urlhash=-ptd&mt=O363xnp0KNnX6hRY6hDcVudkAh6qrzd1t7kt7va64_4GoJoAP4gOKyXu3VKspgmml6o9O5WC7px4m-05cfsxrmVOeZglYBW584A_Uky6udO4dBldzrJfdD8oisBHpJzgcLDwOchdExTIqbTdI3LerToRwV4Fs-24bQ&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BTXRD1cWMSn6vdoA%2FxTQZDA%3D%3D', // Add your actual Notion link here
+  notionLink: ' https://app.notion.com/p/Reimagining-Notion-AI-as-the-AI-Operating-System-for-Modern-Teams-3b7d02fd354f804d920dd07a547f0b7e?source=copy_link', // Add your actual Notion link here
   
   // Hero section
   hero: {
