@@ -44,22 +44,11 @@ export function Hero() {
           
           {/* Competency markers - subtle editorial detail */}
           <div className="pt-8 border-t border-border">
-            <div className="text-xs uppercase tracking-wider text-charcoal-500 mb-3 font-medium">
-              PM Competencies
+            <div className="text-sm text-charcoal-700 mb-3 leading-relaxed">
+              Discovery → Strategy → Prioritization → Experimentation → AI-native thinking
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              {[
-                'Product Discovery',
-                'Product Strategy', 
-                'Prioritization',
-                'Experimentation',
-                'AI Product Thinking'
-              ].map((comp) => (
-                <div key={comp} className="flex items-center gap-2 text-sm text-charcoal-700">
-                  <span className="w-1 h-1 rounded-full bg-accent-600"></span>
-                  <span>{comp}</span>
-                </div>
-              ))}
+            <div className="text-sm text-charcoal-500">
+              How I move from a messy problem to a shipped decision.
             </div>
           </div>
         </div>

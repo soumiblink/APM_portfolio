@@ -7,25 +7,25 @@ const process = [
   {
     number: '01',
     step: 'Discovery',
-    description: 'Start with the problem, not the solution. Talk to users, examine data, understand the context before deciding what to build.',
+    description: 'Before a solution, I want the real problem not the one that is easiest to assume. That means talking to users directly, checking what the data actually shows, and resisting the urge to skip straight to building.',
     focus: 'Understanding'
   },
   {
     number: '02',
     step: 'Define',
-    description: 'Frame the right problem. What are we really solving? Who are we solving it for? Why now? Clear problem definition prevents building the wrong thing.',
+    description: 'A vague problem gets you a confident answer to the wrong question. What are we actually solving, for whom, and why now? Get this wrong, and no amount of good execution saves you later.',
     focus: 'Clarity'
   },
   {
     number: '03',
     step: 'Prioritize',
-    description: 'Make tradeoffs explicit. What matters most? What can wait? What should we not build? Every yes is a no to something else.',
+    description: 'Prioritization is not picking what to do it is committing to what you wont. The things I chose not to build say as much about my judgment as the things I shipped.',
     focus: 'Tradeoffs'
   },
   {
     number: '04',
     step: 'Build',
-    description: 'Work with engineering to ship iteratively. Start small, learn fast, refine as we go. Perfect is the enemy of learning.',
+    description: 'I would rather ship something small and find out I was wrong in a week than spend a quarter building something polished and wrong. Working with engineering means finding the smallest version that actually teaches us something.',
     focus: 'Execution'
   },
   {

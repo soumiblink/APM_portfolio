@@ -10,19 +10,23 @@ const themes = [
   },
   {
     title: 'AI Products',
-    description: 'Building intelligent features that actually improve user workflows',
+    description: 'Knowing when AI earns its place in a workflow and when it\'s the wrong tool for the job.',
   },
   {
     title: 'User Discovery',
-    description: 'Listening to what users do, not just what they say',
+    description: 'What people actually do tells you more than what they say they want',
   },
   {
     title: 'Experimentation',
-    description: 'Testing assumptions with real data instead of opinions',
+    description: 'Letting data settle arguments opinions can\'t.',
   },
   {
     title: 'Technical PM',
     description: 'Understanding engineering constraints to make better product decisions',
+  },
+  {
+    title: 'Trust & Responsible AI',
+    description: 'Earning autonomy with data, not assuming it.',
   },
 ];
 
