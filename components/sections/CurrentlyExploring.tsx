@@ -8,18 +8,8 @@ export function CurrentlyExploring() {
       title: 'AI-native workflows',
       description: 'How products should be designed differently when AI is the foundation, not a feature'
     },
-    {
-      title: 'Product experimentation',
-      description: 'Balancing speed with rigor when testing assumptions'
-    },
-    {
-      title: 'Technical product discovery',
-      description: 'Using engineering knowledge to shape product direction early'
-    },
-    {
-      title: 'Early-stage problem finding',
-      description: 'Identifying the right problems before jumping to solutions'
-    },
+  
+    
     {
       title: 'Human-AI interaction',
       description: 'Designing interfaces where AI augments rather than replaces human judgment'
@@ -44,9 +34,11 @@ export function CurrentlyExploring() {
             <Heading as="h2" className="text-3xl md:text-4xl mb-4">
               What I'm thinking about
             </Heading>
-            <Body size="lg" className="text-charcoal-700 max-w-2xl mx-auto">
-              The problems and domains I'm actively exploring as an aspiring PM
-            </Body>
+            <div className="flex justify-center">
+              <Body size="lg" className="text-charcoal-700 max-w-2xl text-center">
+                Open questions I'm working through right now, in my projects and beyond them.
+              </Body>
+            </div>
           </div>
 
           {/* Topics Grid */}
@@ -77,7 +69,7 @@ export function CurrentlyExploring() {
           {/* Call to action note */}
           <div className="mt-10 text-center">
             <Body size="sm" className="text-charcoal-600 italic">
-              These aren't just buzzwords — they're real questions I'm working through in my projects and thinking
+              These aren't just buzzwords. They're real questions I'm working through in my projects and thinking
             </Body>
           </div>
         </div>

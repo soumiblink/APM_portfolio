@@ -7,22 +7,22 @@ const capabilities = [
   {
     icon: '⚙️',
     capability: 'Understand technical constraints',
-    why: "I know when an idea is technically hard vs. technically impossible. That changes prioritization."
+    why: "I can tell the difference between technically hard and technically impossible, and that distinction changes what even makes it onto a roadmap."
   },
   {
     icon: '🔨',
     capability: 'Prototype product ideas',
-    why: 'I can build quick prototypes to test assumptions instead of waiting for eng resources.'
+    why: 'I can mock up or build a working prototype myself to test an assumption, instead of waiting on engineering time to find out if an idea holds up.'
   },
   {
     icon: '🤖',
     capability: 'Evaluate AI capabilities',
-    why: "I've built with AI/ML enough to know what it can and can't do. That prevents overcommitting."
+    why: "I've built with AI/ML directly, so I know where it's genuinely useful and where it quietly fails, which keeps roadmaps from overpromising what a model can actually do."
   },
   {
     icon: '🎯',
     capability: 'Make realistic MVP decisions',
-    why: "I know what's hard to build and what's not. That makes MVP scoping more accurate."
+    why: "Scoping an MVP isn't just deciding what matters most — it's knowing what each piece actually costs to build, so the cut line is realistic instead of aspirational."
   },
 ];
 
@@ -32,13 +32,12 @@ export function TechnicalProductThinking() {
       <Container>
         <AnimatedSection animation="fade">
           <div className="max-w-3xl mx-auto mb-12">
-            <Eyebrow className="mb-3">Technical Product Thinking</Eyebrow>
+            <Eyebrow className="mb-3 text-base">Technical Product Thinking</Eyebrow>
             <Heading as="h2" className="mb-4">
               Why my engineering background matters
             </Heading>
             <Body size="lg" muted>
-              My engineering background isn't about writing production code — 
-              it's about understanding what's possible, what's hard, and what's worth building.
+              I don't outsource my technical judgment. When feasibility comes up, I can usually see the reasoning myself, which means I push back on the right things, and don't waste a fight on the wrong ones.
             </Body>
           </div>
         </AnimatedSection>
@@ -75,16 +74,12 @@ export function TechnicalProductThinking() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-accent-50 border-l-4 border-accent-600 rounded-r-md p-6">
               <Body className="text-charcoal-800 mb-3 leading-relaxed">
-                <span className="font-semibold text-charcoal-900">The advantage:</span> I can speak product, 
-                user, and engineering. When a designer proposes something impossible, I know. When 
-                an engineer says something will take 6 months, I can ask why. When we need to test 
-                an idea quickly, I can prototype it myself.
+                <span className="font-semibold text-charcoal-900">The advantage:</span> The advantage isn't fluency in one language, it's being able to move between product, design, and engineering without losing anything in translation. A designer's proposal the data model can't actually support, an estimate that assumes more complexity than the problem has, I catch these before they cost a sprint.
+
+
               </Body>
               
-              <Body size="sm" className="text-charcoal-600">
-                Technical fluency makes me a faster, more effective PM. But I'm building products, 
-                not infrastructure.
-              </Body>
+             
             </div>
           </div>
         </AnimatedSection>

@@ -35,9 +35,9 @@ export function About() {
                 I started as a builder
               </Heading>
               <Body className="text-charcoal-700 leading-relaxed">
-                I studied computer science, explored AI/ML, and wrote a lot of code. 
+                I studied computer science with AI/ML, and wrote a lot of code. 
                 But the more I built, the more I realized the hardest part wasn't the 
-                implementation — it was figuring out what to build in the first place.
+                implementation, it was figuring out what to build in the first place.
               </Body>
             </div>
 
@@ -48,10 +48,7 @@ export function About() {
                 I discovered product thinking
               </Heading>
               <Body className="text-charcoal-700 leading-relaxed">
-                I wanted to understand how to identify real problems, talk to users, 
-                prioritize ruthlessly, and make tradeoffs that actually matter. My technical 
-                background helps me work better with engineers, but what drives me is solving 
-                problems people care about.
+                That question — what's actually worth building, turned out to be the more interesting one. It's what pulled me toward product: understanding a problem well enough to know it's the right one, before writing a single line of code to solve it. My technical background hasn't gone away, it just moved from something I do to something I bring to the decisions I make.
               </Body>
             </div>
 
@@ -62,9 +59,7 @@ export function About() {
                 Now I'm seeking opportunity
               </Heading>
               <Body className="text-charcoal-700 leading-relaxed">
-                I'm looking for APM opportunities where I can learn from experienced PMs, 
-                ship real products, and grow my product instincts. I care about thoughtful 
-                product work more than titles.
+                I'm looking for a product role where I can learn from PMs who've done this longer than I have, ship things that reach real users, and build the instincts that only come from doing the work not just studying it.
               </Body>
             </div>
           </div>
@@ -83,7 +78,7 @@ export function About() {
               <div className="flex items-center gap-3">
                 <div className="h-px flex-1 bg-border"></div>
                 <Body size="sm" className="text-charcoal-600 font-medium">
-                  A note on integrity
+                  On honesty and evidence
                 </Body>
               </div>
             </div>

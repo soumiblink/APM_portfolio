@@ -17,8 +17,7 @@ export function Contact() {
           </h2>
           
           <p className="text-lg text-charcoal-700 leading-relaxed mb-10">
-            I'm looking for APM opportunities where I can learn from experienced PMs 
-            and ship products that solve real problems.
+           I'd genuinely like to hear it, whether that's a role, a hard problem you're stuck on, or just a conversation about how you're thinking through something.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
