@@ -13,6 +13,8 @@ import {
   ExperimentationSection,
   LearningsSection,
   ReflectionSection,
+  SectionHeader,
+  DecisionCard,
 } from '@/components/case-study';
 import {
   ProductQuestion,
@@ -26,39 +28,214 @@ import { Body, Caption } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
 import { linkedInJobNavigator } from '@/lib/case-studies/linkedin-job-navigator';
 import { notionAiForesight } from '@/lib/case-studies/notion-ai-foresight';
+import { replitPricingDiagnostic } from '@/lib/case-studies/replit-pricing-diagnostic';
+import { feedbackLens } from '@/lib/case-studies/feedbacklens';
 
-// All case studies
-const caseStudies = [linkedInJobNavigator, notionAiForesight];
+// Render function for product projects (different from case studies)
+function renderProductProject(project: any) {
+  const { product } = project;
+  
+  return (
+    <CaseStudyLayout
+      name={project.name}
+      tagline={project.tagline}
+      overview={product.overview}
+    >
+      {/* GitHub & Live Links Banner */}
+      <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+              {project.status}
+            </Caption>
+            <Body size="sm" className="text-charcoal-700">
+              Full PRD, working prototype, and source code available
+            </Body>
+          </div>
+          <div className="flex gap-3">
+            <Button 
+              href={project.githubLink}
+              variant="secondary"
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              <span>View on GitHub</span>
+              <span>→</span>
+            </Button>
+            {project.liveLink && (
+              <Button 
+                href={project.liveLink}
+                variant="primary"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                <span>Try Live Demo</span>
+                <span>→</span>
+              </Button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Problem Section */}
+      <ProblemSection problem={{
+        who: product.overview.product + ' users',
+        what: product.problem.context,
+        whyItMatters: product.problem.costOfInaction,
+        currentExperience: product.problem.currentSolution
+      }} />
+      
+      <ProductQuestion question="How do you turn 200+ weekly feedback items into defensible priorities without manual synthesis?" />
+      
+      {/* Product Solution */}
+      <SolutionSection solution={{
+        description: product.solution.vision,
+        keyFeatures: product.solution.coreCapabilities,
+        visuals: []
+      }} />
+      
+      <TheDecision decision={product.overview.productThesis} />
+      
+      {/* Product Decisions Made */}
+      <div className="mb-16">
+        <SectionHeader
+          number="05"
+          title="Key Product Decisions"
+          description="Trade-offs and rationale for major design choices"
+          id="decisions"
+        />
+        <div className="space-y-6">
+          {product.productDecisions.map((decision: any, index: number) => (
+            <DecisionCard
+              key={index}
+              title={decision.decision}
+              label={decision.tradeoff ? 'Trade-off Made' : undefined}
+            >
+              <Body size="sm" className="text-charcoal-700 mb-3">
+                <span className="font-semibold">Rationale:</span> {decision.rationale}
+              </Body>
+              {decision.tradeoff && (
+                <Body size="sm" className="text-charcoal-600 italic">
+                  {decision.tradeoff}
+                </Body>
+              )}
+            </DecisionCard>
+          ))}
+        </div>
+      </div>
+      
+      {/* Technical Highlights */}
+      <div className="mb-16">
+        <SectionHeader
+          number="06"
+          title="Technical Implementation"
+          description="How engineering background informed product decisions"
+          id="technical"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {product.technicalHighlights.map((highlight: any, index: number) => (
+            <div key={index} className="bg-warmth-100 border-l-4 border-charcoal-900 p-6 rounded-r-lg">
+              <Body className="font-semibold text-charcoal-900 mb-3">{highlight.category}</Body>
+              <ul className="space-y-2">
+                {highlight.details.map((detail: string, i: number) => (
+                  <li key={i} className="flex gap-2">
+                    <span className="text-accent-600 mt-1.5 flex-shrink-0">•</span>
+                    <Body size="sm" className="text-charcoal-700">{detail}</Body>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* PRD Highlights */}
+      <div className="mb-16">
+        <SectionHeader
+          number="07"
+          title="PRD Process & Documentation"
+          description="How product requirements were structured and validated"
+          id="prd"
+        />
+        <div className="space-y-6">
+          {product.prdHighlights.map((section: any, index: number) => (
+            <div key={index} className="bg-accent-50 border-l-4 border-accent-600 p-6 rounded-r-lg">
+              <Body className="font-semibold text-charcoal-900 mb-3">{section.section}</Body>
+              <ul className="space-y-2">
+                {section.keyPoints.map((point: string, i: number) => (
+                  <li key={i} className="flex gap-2">
+                    <span className="text-accent-600 mt-1.5 flex-shrink-0">→</span>
+                    <Body size="sm" className="text-charcoal-700">{point}</Body>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <GoalsSection goals={{
+        product: 'Automate feedback synthesis and make prioritization auditable',
+        user: 'Spend less time gathering evidence, more time deciding what to do with it',
+        business: 'Cut manual triage hours, build institutional memory that survives turnover',
+        leadingIndicators: product.metrics.supporting,
+        note: `North Star: ${product.metrics.northStar}`
+      }} />
+      
+      <LearningsSection learnings={{
+        whatILearned: [...product.learnings.productLearning, ...product.learnings.technicalLearning],
+        whatSurprisedMe: 'That external review caught scope contradictions and missing requirements I completely missed after weeks of writing',
+        whatIWouldChange: product.learnings.whatIWouldDoDifferently,
+        nextInvestigation: 'Run a two-week shadow period with real PMs to validate scoring model weights against actual judgment'
+      }} />
+      
+      <BuildersNote note="This project taught me that building a product and documenting it as a PM are different skills. Writing the PRD after building the prototype revealed gaps in my original thinking (like PII redaction, which wasn't in the initial spec) that a PM-first approach would have caught earlier. The external review process made that lesson concrete: every piece of feedback traced directly to a change in the document, which is exactly how product decisions should work." />
+    </CaseStudyLayout>
+  );
+}
+
+// All case studies and product projects
+const caseStudies = [linkedInJobNavigator, notionAiForesight, replitPricingDiagnostic];
+const productProjects = [feedbackLens];
+const allProjects = [...caseStudies, ...productProjects];
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const caseStudy = caseStudies.find((study) => study.slug === slug);
+  const project = allProjects.find((p: any) => p.slug === slug);
 
-  if (!caseStudy) {
+  if (!project) {
     return {
-      title: 'Case Study Not Found',
+      title: 'Project Not Found',
     };
   }
 
   return {
-    title: `${caseStudy.name} | Case Study`,
-    description: caseStudy.tagline,
+    title: `${project.name} | ${project.type || 'Case Study'}`,
+    description: project.tagline,
     openGraph: {
-      title: caseStudy.name,
-      description: caseStudy.tagline,
+      title: project.name,
+      description: project.tagline,
       type: 'article',
     },
   };
 }
 
 export async function generateStaticParams() {
-  return caseStudies.map((study) => ({
-    slug: study.slug,
+  return allProjects.map((project: any) => ({
+    slug: project.slug,
   }));
 }
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  
+  // Check if it's a product project first
+  const productProject = productProjects.find((p: any) => p.slug === slug);
+  if (productProject) {
+    return renderProductProject(productProject);
+  }
+  
+  // Otherwise, render as case study
   const caseStudy = caseStudies.find((study) => study.slug === slug);
 
   if (!caseStudy) {

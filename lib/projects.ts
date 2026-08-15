@@ -47,6 +47,10 @@ export interface ProjectData {
   // Technical Context (optional)
   technicalContext?: string; // How technical background helped
   
+  // Links for coded products
+  githubLink?: string;
+  liveLink?: string;
+  
   // Visual Data (for card differentiation)
   visual?: {
     type: 'metric' | 'strategy' | 'insight' | 'experiment';
@@ -129,6 +133,8 @@ export const projects: ProjectData[] = [
     tagline: "Product teams drown in feedback but can't find patterns.",
     type: 'Technical PM',
     status: 'Coded Product',
+    githubLink: 'https://github.com/soumiblink/FeedbackLens',
+    liveLink: '', // Will be added when deployed
     competencies: [
       'Customer Discovery',
       'Technical Execution',
@@ -152,31 +158,33 @@ export const projects: ProjectData[] = [
     }
   },
   {
-    slug: 'ai-experiment-hub',
-    name: 'AI Experiment Hub',
-    tagline: "Teams run A/B tests but don't understand what actually moved metrics.",
-    type: 'Experimentation',
-    status: 'Concept',
+    slug: 'replit-pricing-diagnostic',
+    name: 'Pricing in the Dark',
+    tagline: "Replit's AI Agent billed users $1K/week with no way to predict costs before tasks ran.",
+    type: 'Product Strategy',
+    status: 'Portfolio Project',
     competencies: [
-      'Experiment Design',
-      'Metrics & Analytics',
+      'Problem Framing',
       'Product Strategy',
-      'Technical Execution',
+      'Competitive Analysis',
+      'Prioritization',
+      'Metrics & Analytics',
     ],
-    keyInsight: "Designed an experimentation framework that connects test results to product decisions, not just statistical significance.",
-    technicalContext: 'Scoped MVP to ship in weeks by understanding what is technically simple vs. complex',
+    keyInsight: "Diagnosed that Replit didn't lose users because AI is expensive — they lost trust because cost was unknowable in advance and disconnected from whether tasks succeeded.",
+    technicalContext: 'Understood the engineering constraint: Agent 3\'s sub-agent fan-out makes pre-task estimation genuinely harder than competitors\' simpler token counts',
     visual: {
-      type: 'experiment',
+      type: 'metric',
       data: {
-        label: 'Test Structure',
-        stat: 'Hypothesis → Metric → Decision',
-        description: 'Product-led experimentation'
+        label: 'Cost Spike',
+        stat: '5-20x overnight',
+        description: 'From $180/mo → $1K/week'
       }
     },
-    cta: 'Read the case study →',
+    cta: 'Read the diagnostic →',
     metadata: {
-      timeline: '4 weeks',
-      industry: 'Analytics / Growth',
+      timeline: 'Growth & Retention Case Study',
+      industry: 'Developer Tools / SaaS',
+      featured: true,
     }
   },
 ];

@@ -81,13 +81,52 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* CTA */}
       <div className="pt-4 border-t border-border">
-        <Link 
-          href={`/work/${project.slug}`}
-          variant="accent"
-          className="inline-flex items-center gap-1 text-sm font-semibold no-underline text-accent-600 hover:text-accent-700 group-hover:gap-2 transition-all"
-        >
-          {project.cta}
-        </Link>
+        {/* Show GitHub/Live links for coded products */}
+        {(project.githubLink || project.liveLink !== undefined) ? (
+          <div className="space-y-3">
+            <div className="flex gap-2">
+              {project.githubLink && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 px-3 py-1.5 text-center text-xs font-medium border-2 border-charcoal-900 text-charcoal-900 rounded hover:bg-charcoal-900 hover:text-warmth-100 transition-colors"
+                >
+                  GitHub →
+                </a>
+              )}
+              {project.liveLink !== undefined && (
+                <a
+                  href={project.liveLink || undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex-1 px-3 py-1.5 text-center text-xs font-medium border-2 border-accent-600 text-accent-600 rounded transition-colors ${
+                    project.liveLink 
+                      ? 'hover:bg-accent-600 hover:text-warmth-100' 
+                      : 'opacity-50 cursor-not-allowed pointer-events-none'
+                  }`}
+                >
+                  Live Demo →
+                </a>
+              )}
+            </div>
+            <Link 
+              href={`/work/${project.slug}`}
+              variant="accent"
+              className="inline-flex items-center gap-1 text-sm font-semibold no-underline text-accent-600 hover:text-accent-700 group-hover:gap-2 transition-all"
+            >
+              {project.cta}
+            </Link>
+          </div>
+        ) : (
+          <Link 
+            href={`/work/${project.slug}`}
+            variant="accent"
+            className="inline-flex items-center gap-1 text-sm font-semibold no-underline text-accent-600 hover:text-accent-700 group-hover:gap-2 transition-all"
+          >
+            {project.cta}
+          </Link>
+        )}
       </div>
     </Card>
   );
