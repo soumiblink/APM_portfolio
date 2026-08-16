@@ -134,7 +134,7 @@ export const projects: ProjectData[] = [
     type: 'Technical PM',
     status: 'Coded Product',
     githubLink: 'https://github.com/soumiblink/FeedbackLens',
-    liveLink: '', // Will be added when deployed
+    liveLink: 'https://feedbacklens-theta.vercel.app/',
     competencies: [
       'Customer Discovery',
       'Technical Execution',

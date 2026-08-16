@@ -71,7 +71,7 @@ export const feedbackLens: ProductProject = {
   type: 'Technical PM / Coded Product',
   status: 'Built & Documented',
   githubLink: 'https://github.com/soumiblink/FeedbackLens',
-  liveLink: undefined, // Will be added later
+  liveLink: 'https://feedbacklens-theta.vercel.app/',
   
   product: {
     overview: {
