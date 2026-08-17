@@ -87,7 +87,7 @@ export function Header() {
               Contact
             </Link>
             <Button
-              href="/resume.pdf"
+              href="/SoumiGhosh_PM.pdf"
               variant="secondary"
               size="sm"
               className="font-medium"

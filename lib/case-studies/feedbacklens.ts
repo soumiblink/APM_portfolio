@@ -70,7 +70,7 @@ export const feedbackLens: ProductProject = {
   tagline: 'Turning scattered customer feedback into decisions you can defend',
   type: 'Technical PM / Coded Product',
   status: 'Built & Documented',
-  githubLink: 'https://github.com/soumiblink/FeedbackLens',
+  githubLink: 'https://github.com/soumiblink/PM_portfolio',
   liveLink: 'https://feedbacklens-theta.vercel.app/',
   
   product: {

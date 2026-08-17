@@ -36,7 +36,7 @@ export function Hero() {
             <Button 
               variant="secondary" 
               size="lg"
-              href="/resume.pdf"
+              href="/SoumiGhosh_PM.pdf"
             >
               Download resume
             </Button>

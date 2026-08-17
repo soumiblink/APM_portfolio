@@ -51,7 +51,7 @@ export function Footer() {
               GitHub
             </Link>
             <Link 
-              href="/resume.pdf" 
+              href="/SoumiGhosh_PM.pdf" 
               variant="subtle"
               className="text-sm text-warmth-100 hover:text-accent-300 transition-colors"
               aria-label="Resume"

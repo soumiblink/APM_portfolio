@@ -133,7 +133,7 @@ export const projects: ProjectData[] = [
     tagline: "Product teams drown in feedback but can't find patterns.",
     type: 'Technical PM',
     status: 'Coded Product',
-    githubLink: 'https://github.com/soumiblink/FeedbackLens',
+    githubLink: 'https://github.com/soumiblink/PM_portfolio',
     liveLink: 'https://feedbacklens-theta.vercel.app/',
     competencies: [
       'Customer Discovery',
