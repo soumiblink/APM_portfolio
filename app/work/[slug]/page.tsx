@@ -29,6 +29,7 @@ import { Button } from '@/components/ui/Button';
 import { linkedInJobNavigator } from '@/lib/case-studies/linkedin-job-navigator';
 import { notionAiForesight } from '@/lib/case-studies/notion-ai-foresight';
 import { replitPricingDiagnostic } from '@/lib/case-studies/replit-pricing-diagnostic';
+import { whoopDataTrust } from '@/lib/case-studies/whoop-data-trust';
 import { feedbackLens } from '@/lib/case-studies/feedbacklens';
 
 // Render function for product projects (different from case studies)
@@ -195,7 +196,7 @@ function renderProductProject(project: any) {
 }
 
 // All case studies and product projects
-const caseStudies = [linkedInJobNavigator, notionAiForesight, replitPricingDiagnostic];
+const caseStudies = [linkedInJobNavigator, notionAiForesight, replitPricingDiagnostic, whoopDataTrust];
 const productProjects = [feedbackLens];
 const allProjects = [...caseStudies, ...productProjects];
 
@@ -381,6 +382,198 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         ]} />
         
         <ReflectionSection reflection={caseStudy.reflection?.statement || ''} />
+      </CaseStudyLayout>
+    );
+  }
+
+  // Render WHOOP Data Trust case study
+  if (slug === 'whoop-data-trust') {
+    const { caseStudy: content } = caseStudy;
+    
+    return (
+      <CaseStudyLayout
+        name={caseStudy.name}
+        tagline={caseStudy.tagline}
+        overview={content.overview}
+      >
+        {/* Notion Link Banner */}
+        {caseStudy.notionLink && (
+          <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+                  Full Case Study
+                </Caption>
+                <Body size="sm" className="text-charcoal-700">
+                  Read the complete case study with all details in Notion
+                </Body>
+              </div>
+              <Button 
+                href={caseStudy.notionLink}
+                variant="primary"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                <span>View in Notion</span>
+                <span>→</span>
+              </Button>
+            </div>
+          </div>
+        )}
+        
+        <ProblemSection problem={content.problem} />
+        
+        <ProductQuestion question="When users reverse-engineer their own hardware instead of complaining, what structural thing is missing?" />
+        
+        <EvidenceSection evidence={content.evidence} />
+        
+        <InsightSection insight={content.insight} />
+        
+        <TheDecision decision="Install a structural checkpoint that forces the question: 'Does this make data access feel conditional?' before any pricing, hardware, or data decision ships." />
+        
+        <GoalsSection goals={content.goals} />
+        
+        <ConstraintsSection constraints={content.constraints} />
+        
+        <BuildersNote note="Understanding Goose (the Bluetooth workaround tool) required technical fluency. It's not just user frustration—it's a signal that the cost of reverse-engineering became lower than the cost of trusting the company. That's a PM insight disguised as an engineering hack." />
+        
+        <OptionsSection options={content.optionsConsidered} />
+        
+        <TheTradeoff 
+          chose="Controlled, visible costs ($15-25M near-term revenue risk)"
+          overThis="Deferred, recurring costs (fourth trust crisis in 18 months)"
+          because="Option B (decouple data from subscription) has upfront costs you can plan for. Option A (status quo) has compounding trust erosion that shows up unpredictably. Controlled beats deferred."
+        />
+        
+        <PrioritizationSection prioritization={content.prioritization} />
+        
+        <SolutionSection solution={content.solution} />
+        
+        <MVPSection mvp={content.mvp} />
+        
+        <WhatICut items={[
+          {
+            what: "Status quo (Option A)",
+            why: "Three incidents in three years means the gap isn't closing, it's widening. Costs are recurring and compounding, not one-time."
+          },
+          {
+            what: "Half-measures like 'grandfathering' only after backlash",
+            why: "Doesn't fix the root cause (missing checkpoint). Users already learned this pattern doesn't work."
+          },
+          {
+            what: "Pure PR response without structural change",
+            why: "Trust failures aren't communication problems. They're architectural ones."
+          }
+        ]} />
+        
+        <ExperimentationSection experimentation={content.experimentation} />
+        
+        <LearningsSection learnings={content.learnings} />
+        
+        <StillThinkingAbout questions={[
+          "How good does WHOOP's coaching product need to be to genuinely justify $199-359/year on insight alone?",
+          "What's the right way to model seasonal churn risk when you're removing the main retention lever?",
+          "Could this policy change actually make the subscription feel more valuable (because data is unconditional)?",
+          "How would Oura or Garmin respond if WHOOP announced permanent data access?"
+        ]} />
+        
+        <ReflectionSection reflection={content.pmReflection} />
+      </CaseStudyLayout>
+    );
+  }
+  
+  // Render Replit Pricing Diagnostic case study
+  if (slug === 'replit-pricing-diagnostic') {
+    const { caseStudy: content } = caseStudy;
+    
+    return (
+      <CaseStudyLayout
+        name={caseStudy.name}
+        tagline={caseStudy.tagline}
+        overview={content.overview}
+      >
+        {/* Notion Link Banner */}
+        {caseStudy.notionLink && (
+          <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+                  Full Case Study
+                </Caption>
+                <Body size="sm" className="text-charcoal-700">
+                  Read the complete case study with all details in Notion
+                </Body>
+              </div>
+              <Button 
+                href={caseStudy.notionLink}
+                variant="primary"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                <span>View in Notion</span>
+                <span>→</span>
+              </Button>
+            </div>
+          </div>
+        )}
+        
+        <ProblemSection problem={content.problem} />
+        
+        <ProductQuestion question="Users aren't churning because AI is expensive—they're churning because they can't predict what they'll pay before clicking 'run'. How do you fix predictability when the architecture genuinely makes it harder than competitors?" />
+        
+        <EvidenceSection evidence={content.evidence} />
+        
+        <InsightSection insight={content.insight} />
+        
+        <TheDecision decision="Replit's churn problem isn't a pricing problem—it's a trust problem disguised as a billing spike." />
+        
+        <GoalsSection goals={content.goals} />
+        
+        <ConstraintsSection constraints={content.constraints} />
+        
+        <BuildersNote note="Understanding Agent 3's sub-agent fan-out architecture helped me see why this is genuinely harder for Replit than competitors. Cursor counts tokens. Bolt runs one script. Replit spawns recursive sub-agents that decide mid-task whether to keep going. That's not a cop-out—it's an engineering constraint that shapes what solutions are even possible." />
+        
+        <OptionsSection options={content.optionsConsidered} />
+        
+        <TheTradeoff 
+          chose="Pre-task cost ceiling (even if imperfect)"
+          overThis="Post-task cost explanations (even if detailed)"
+          because="Users will tolerate approximate estimates before they click. They won't tolerate perfect explanations after the bill arrives. Trust requires control at decision time, not clarity after the fact."
+        />
+        
+        <PrioritizationSection prioritization={content.prioritization} />
+        
+        <SolutionSection solution={content.solution} />
+        
+        <MVPSection mvp={content.mvp} />
+        
+        <WhatICut items={[
+          {
+            what: "Retrospective cost breakdowns (Option A)",
+            why: "Perfect explanations after the bill doesn't solve the trust problem. Users need control before they commit, not clarity after."
+          },
+          {
+            what: "Pure usage-based pricing with no ceiling",
+            why: "Optimizes for margin but makes the product unbudgetable for the core user (bootstrapped founders, students)."
+          },
+          {
+            what: "Exact pre-task estimates",
+            why: "Agent 3's architecture makes this genuinely impossible without killing the product's core capability (adaptive sub-agent reasoning)."
+          }
+        ]} />
+        
+        <ExperimentationSection experimentation={content.experimentation} />
+        
+        <LearningsSection learnings={content.learnings} />
+        
+        <StillThinkingAbout questions={[
+          "What's the right ceiling tolerance before power users feel constrained by artificial limits?",
+          "How should Replit handle the edge case where task value genuinely exceeds the ceiling midway?",
+          "Could 'ceiling breach warnings' restore agency without killing the task entirely?",
+          "Would this model work for enterprise customers who care less about predictability and more about capability?"
+        ]} />
+        
+        <ReflectionSection reflection={content.pmReflection} />
       </CaseStudyLayout>
     );
   }

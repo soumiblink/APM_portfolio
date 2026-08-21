@@ -187,4 +187,34 @@ export const projects: ProjectData[] = [
       featured: true,
     }
   },
+  {
+    slug: 'whoop-data-trust',
+    name: 'WHOOP: Users Hacking Their Own Bodies Back',
+    tagline: "WHOOP's users are reverse-engineering their own hardware to own their data",
+    type: 'Product Strategy',
+    status: 'Portfolio Project',
+    competencies: [
+      'Product Strategy',
+      'Problem Framing',
+      'Competitive Analysis',
+      'Prioritization',
+      'Metrics & Analytics',
+    ],
+    keyInsight: "Three trust failures in three years isn't bad luck—it's what happens when business model (subscription lock-in) fights brand promise (data ownership). Diagnosed the missing structural checkpoint.",
+    technicalContext: 'Understood that workaround tools like Goose (Bluetooth signal interception) were strategic signals, not just technical hacks',
+    visual: {
+      type: 'strategy',
+      data: {
+        label: 'Strategic Tension',
+        from: 'Data as leverage',
+        to: 'Insight as value'
+      }
+    },
+    cta: 'Read the case study →',
+    metadata: {
+      timeline: 'Strategic Analysis',
+      industry: 'Health Tech / Wearables',
+      featured: true,
+    }
+  },
 ];
