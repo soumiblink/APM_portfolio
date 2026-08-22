@@ -90,7 +90,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 px-3 py-2 text-center text-xs font-medium border-2 border-charcoal-900 text-charcoal-900 rounded hover:bg-charcoal-900 hover:text-warmth-100 transition-colors"
+                  className="flex-1 px-3 py-2 text-center text-xs font-medium border-2 border-charcoal-900 text-charcoal-900 rounded hover:bg-charcoal-900 hover:text-white transition-colors"
                 >
                   GitHub →
                 </a>
@@ -102,7 +102,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   rel="noopener noreferrer"
                   className={`flex-1 px-3 py-2 text-center text-xs font-medium border-2 border-accent-600 text-accent-600 rounded transition-colors ${
                     project.liveLink 
-                      ? 'hover:bg-accent-600 hover:text-warmth-100' 
+                      ? 'hover:bg-accent-600 hover:text-white' 
                       : 'opacity-50 cursor-not-allowed pointer-events-none'
                   }`}
                 >
@@ -113,18 +113,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Link 
               href={`/work/${project.slug}`}
               variant="accent"
-              className="inline-flex items-center gap-1 text-sm font-semibold no-underline text-accent-600 hover:text-accent-700 group-hover:gap-2 transition-all"
+              className="inline-flex items-center gap-1 text-base font-bold no-underline text-accent-700 hover:text-accent-600 group-hover:gap-3 transition-all duration-300 hover:translate-x-1"
             >
-              {project.cta}
+              <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-600 after:transition-all after:duration-300 hover:after:w-full">
+                {project.cta}
+              </span>
             </Link>
           </div>
         ) : (
           <Link 
             href={`/work/${project.slug}`}
             variant="accent"
-            className="inline-flex items-center gap-1 text-sm font-semibold no-underline text-accent-600 hover:text-accent-700 group-hover:gap-2 transition-all"
+            className="inline-flex items-center gap-1 text-base font-bold no-underline text-accent-700 hover:text-accent-600 group-hover:gap-3 transition-all duration-300 hover:translate-x-1"
           >
-            {project.cta}
+            <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-600 after:transition-all after:duration-300 hover:after:w-full">
+              {project.cta}
+            </span>
           </Link>
         )}
       </div>

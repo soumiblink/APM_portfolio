@@ -114,6 +114,7 @@ export interface FullCaseStudy {
   tagline: string;
   type: string;
   status: string;
+  liveLink?: string; // Optional link to prototype or live demo
   notionLink?: string; // Optional link to full case study in Notion
   
   // Full case study content

@@ -26,12 +26,12 @@ export function Button({
     transition-all duration-200
     focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600
     disabled:opacity-50 disabled:cursor-not-allowed
-    no-underline
   `;
 
   const variants = {
     primary: `
       bg-accent-600
+      text-white
       hover:bg-accent-700
       active:bg-accent-800
       shadow-sm hover:shadow
@@ -51,20 +51,24 @@ export function Button({
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} rounded-md ${className}`.trim().replace(/\s+/g, ' ');
-  
-  // Force white text for primary buttons
-  const style = variant === 'primary' ? { color: '#ffffff' } : undefined;
 
   if (href) {
     return (
-      <a href={href} className={classes} style={style}>
+      <a 
+        href={href} 
+        className={classes}
+        style={{ 
+          textDecoration: 'none',
+          color: variant === 'primary' ? 'white' : 'inherit'
+        }}
+      >
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes} style={style} {...props}>
+    <button className={classes} {...props}>
       {children}
     </button>
   );

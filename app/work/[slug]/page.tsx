@@ -30,6 +30,7 @@ import { linkedInJobNavigator } from '@/lib/case-studies/linkedin-job-navigator'
 import { notionAiForesight } from '@/lib/case-studies/notion-ai-foresight';
 import { replitPricingDiagnostic } from '@/lib/case-studies/replit-pricing-diagnostic';
 import { whoopDataTrust } from '@/lib/case-studies/whoop-data-trust';
+import { coinbaseRestrictionTransparency } from '@/lib/case-studies/coinbase-restriction-transparency';
 import { feedbackLens } from '@/lib/case-studies/feedbacklens';
 
 // Render function for product projects (different from case studies)
@@ -60,8 +61,7 @@ function renderProductProject(project: any) {
               size="sm"
               className="flex items-center gap-2"
             >
-              <span>View on GitHub</span>
-              <span>→</span>
+              View on GitHub →
             </Button>
             {project.liveLink && (
               <Button 
@@ -70,8 +70,7 @@ function renderProductProject(project: any) {
                 size="sm"
                 className="flex items-center gap-2"
               >
-                <span>Try Live Demo</span>
-                <span>→</span>
+                Try Live Demo →
               </Button>
             )}
           </div>
@@ -196,7 +195,7 @@ function renderProductProject(project: any) {
 }
 
 // All case studies and product projects
-const caseStudies = [linkedInJobNavigator, notionAiForesight, replitPricingDiagnostic, whoopDataTrust];
+const caseStudies = [linkedInJobNavigator, notionAiForesight, replitPricingDiagnostic, whoopDataTrust, coinbaseRestrictionTransparency];
 const productProjects = [feedbackLens];
 const allProjects = [...caseStudies, ...productProjects];
 
@@ -577,6 +576,125 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       </CaseStudyLayout>
     );
   }
+  
+  // Render Coinbase Restriction Transparency case study
+  if (slug === 'coinbase-restriction-transparency') {
+    const { caseStudy: content } = caseStudy;
+    
+    return (
+      <CaseStudyLayout
+        name={caseStudy.name}
+        tagline={caseStudy.tagline}
+        overview={content.overview}
+      >
+        {/* Prototype Link Banner */}
+        {caseStudy.liveLink && (
+          <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+                  Interactive Prototype
+                </Caption>
+                <Body size="sm" className="text-charcoal-700">
+                  Experience the proposed solution through a working prototype
+                </Body>
+              </div>
+              <Button 
+                href={caseStudy.liveLink}
+                variant="primary"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                Try Prototype →
+              </Button>
+            </div>
+          </div>
+        )}
+        
+        {/* Notion Link Banner */}
+        {caseStudy.notionLink && (
+          <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+                  Full Case Study
+                </Caption>
+                <Body size="sm" className="text-charcoal-700">
+                  Read the complete case study with all details in Notion
+                </Body>
+              </div>
+              <Button 
+                href={caseStudy.notionLink}
+                variant="primary"
+                size="sm"
+                className="flex items-center gap-2"
+              >
+                View in Notion →
+              </Button>
+            </div>
+          </div>
+        )}
+        
+        <ProblemSection problem={content.problem} />
+        
+        <ProductQuestion question="When Coinbase cut resolution times by 90% but complaints stayed the same, what layer of the problem did they miss?" />
+        
+        <EvidenceSection evidence={content.evidence} />
+        
+        <InsightSection insight={content.insight} />
+        
+        <TheDecision decision="Coinbase has the data users need (queue type, expected duration, exact blocker) but doesn't surface it. The fix isn't faster processing—it's closing the information asymmetry." />
+        
+        <GoalsSection goals={content.goals} />
+        
+        <ConstraintsSection constraints={content.constraints} />
+        
+        <BuildersNote note="Understanding the regulatory floor matters. Coinbase can't just remove friction—certain compliance triggers are legally non-negotiable. That constraint shapes what solutions are even possible: you can't eliminate the wait, but you can explain it while it happens." />
+        
+        <OptionsSection options={content.optionsConsidered} />
+        
+        <TheTradeoff 
+          chose="Phase 1 (Instant SLA Disclosure) before Phase 4 (AI-predicted ETA)"
+          overThis="Shipping the flashy AI feature first"
+          because="The AI-predicted ETA is more product-exciting but scores lowest on RICE. It requires data foundation from Phases 1-2 that doesn't exist yet. Sequencing for confidence and impact, not narrative appeal, is what separates a shippable roadmap from a pitch deck."
+        />
+        
+        <PrioritizationSection prioritization={content.prioritization} />
+        
+        <SolutionSection solution={content.solution} />
+        
+        <MVPSection mvp={content.mvp} />
+        
+        <WhatICut items={[
+          {
+            what: "Touching the compliance engine itself",
+            why: "This is communication layer only. The constraint is real (regulatory floor), but the communication layer sits on top of it."
+          },
+          {
+            what: "Reducing actual case resolution time",
+            why: "That was the May 2026 AI investment. This plan changes what users are told about a restriction, not how fast it resolves."
+          },
+          {
+            what: "Shipping AI-predicted ETA before data foundation exists",
+            why: "Would be another opaque black box. Phase 4 only ships if it clears transparency bar and explains its own uncertainty."
+          }
+        ]} />
+        
+        <ExperimentationSection experimentation={content.experimentation} />
+        
+        <LearningsSection learnings={content.learnings} />
+        
+        <StillThinkingAbout questions={[
+          "What does the legal/compliance review actually look like for queue label disclosure? Is 'standard review' vs 'extended review' safe?",
+          "Would users trust an AI-predicted ETA, or would it feel like another promise the system can't keep?",
+          "How do you measure 'understood what was happening' satisfaction when that metric doesn't exist yet?",
+          "Could exposing queue-specific timelines create new gaming behavior where users try to trigger faster queues?"
+        ]} />
+        
+        <ReflectionSection reflection={content.pmReflection} />
+      </CaseStudyLayout>
+    );
+  }
 
   // Render LinkedIn Job Navigator case study (original)
   const { name, tagline, caseStudy: content } = caseStudy;
@@ -587,6 +705,30 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       tagline={tagline}
       overview={content.overview}
     >
+      {/* Prototype Link Banner */}
+      {caseStudy.liveLink && (
+        <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <Caption className="text-accent-700 uppercase tracking-wider text-xs font-semibold mb-1">
+                Interactive Prototype
+              </Caption>
+              <Body size="sm" className="text-charcoal-700">
+                Experience the solution through a working prototype
+              </Body>
+            </div>
+            <Button 
+              href={caseStudy.liveLink}
+              variant="primary"
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              Try Prototype →
+            </Button>
+          </div>
+        </div>
+      )}
+      
       {/* Notion Link Banner */}
       {caseStudy.notionLink && (
         <div className="mb-12 p-6 bg-gradient-to-r from-accent-50 to-warmth-100 border-l-4 border-accent-600 rounded-r-lg">

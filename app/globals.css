@@ -253,7 +253,7 @@ a {
   transition: color var(--transition-fast);
 }
 
-a:hover {
+a:not([class*="bg-"]):hover {
   color: var(--link-hover);
 }
 

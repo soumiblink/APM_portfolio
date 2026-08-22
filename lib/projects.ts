@@ -76,6 +76,7 @@ export const projects: ProjectData[] = [
     tagline: "Early-career job seekers can't filter signal from noise.",
     type: 'Consumer Product',
     status: 'Portfolio Project',
+    liveLink: 'https://linked-in-jobs-prototype.vercel.app/',
     competencies: [
       'User Research',
       'Problem Framing',
@@ -214,6 +215,37 @@ export const projects: ProjectData[] = [
     metadata: {
       timeline: 'Strategic Analysis',
       industry: 'Health Tech / Wearables',
+      featured: true,
+    }
+  },
+  {
+    slug: 'coinbase-restriction-transparency',
+    name: 'Faster, Not Clearer',
+    tagline: "Coinbase cut restriction review times by 90% but users still don't know why their accounts are locked",
+    type: 'Product Strategy',
+    status: 'Portfolio Project',
+    liveLink: 'https://coinbase-prototype.vercel.app/',
+    competencies: [
+      'Problem Framing',
+      'Product Strategy',
+      'Prioritization',
+      'Roadmapping',
+      'Metrics & Analytics',
+    ],
+    keyInsight: "Diagnosed that Coinbase solved the wrong layer: invested in processing speed when the documented failure was communication. Users aren't told which queue they're in, how long it takes, or what's blocking them—but Coinbase already knows all of this internally.",
+    technicalContext: 'Understood the compliance constraint: certain regulatory triggers legally must pause accounts, so the fix had to expose existing data, not remove friction',
+    visual: {
+      type: 'metric',
+      data: {
+        label: 'Information Gap',
+        stat: '2hrs → 8mo',
+        description: 'Same "under review" screen'
+      }
+    },
+    cta: 'Read the diagnostic →',
+    metadata: {
+      timeline: 'Product Strategy Case Study',
+      industry: 'Fintech / Crypto',
       featured: true,
     }
   },
